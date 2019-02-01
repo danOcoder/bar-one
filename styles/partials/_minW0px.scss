@@ -1,0 +1,93 @@
+/**** Variables ****/
+
+$OffWhite: #ffffff;
+$rustRed: #bf2603;
+$dustyOrange: #ff8327;
+$darkRed: #220303;
+$black: #111010;
+
+/**** Mixins ****/
+
+@mixin headingFont ($fontSize, $letterSpacing) {
+  font-family: 'Tulpen One', cursive;
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+  color: $dustyOrange;
+  text-align: center;
+}
+
+@mixin bodyFont ($fontSize, $lineHeight, $letterSpacing, $textAlign) {
+  font-family: 'Chathura', sans-serif;
+  color: $OffWhite;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  text-align: $textAlign;
+}
+
+
+html {
+  font-size: 125%;
+  /*
+    62.5% = units of 10px
+    125% = units of 20px
+     */
+}
+
+h1 {
+  @include headingFont(fontSize, letterSpacing);
+}
+
+.imgContainer {
+  overflow: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8f8f8f;
+  padding: 20px;
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.iconContent {
+  .iconWrap {
+    display: none;
+  }
+}
+
+.iconContent>div {
+  display: none;
+}
+
+.spaceComBlogTouch {
+  label {
+    float: left;
+  }
+}
+
+.iconContent {
+  clear: both;
+}
+
+#newSpace:checked~.iconContent .newSpace,
+#community:checked~.iconContent .community,
+#blog:checked~.iconContent .blog,
+#getInTouch:checked~.iconContent .getInTouch {
+  display: block;
+}
+
+.spaceComBlogTouch input {
+  opacity: 0;
+  position: absolute;
+}
