@@ -1,3 +1,14 @@
-/**** screen meets or exceeds 320 px****/
+@media (min-width: 320px) {
 
-@media (min-width: 320px) {}
+  /**** Events ****/
+  .events2 {
+    .imgContainer {
+      margin: 0 auto;
+      box-shadow: -15px 15px 0px 4px $dustyOrange;
+    }
+
+    h2 {
+      margin: 40px 0 20px 0;
+    }
+  }
+}

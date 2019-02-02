@@ -18,7 +18,7 @@ $black: #111010;
 
 @mixin bodyFont ($fontSize, $lineHeight, $letterSpacing, $textAlign) {
   font-family: 'Chathura', sans-serif;
-  // color: $OffWhite;
+  color: $OffWhite;
   font-size: $fontSize;
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
@@ -35,9 +35,22 @@ html {
      */
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   @include headingFont(6.5rem, 0.05rem);
   line-height: 3.5rem;
+}
+
+h2 {
+  @include bodyFont (3.4rem, 2.9rem, 0.1rem, center);
+  margin: 20px 0;
+}
+
+p {
+  @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
 }
 
 .wrapper {
@@ -45,9 +58,14 @@ h1 {
   margin: 0 auto;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .flexParent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -61,25 +79,42 @@ img {
   display: block;
 }
 
-.iconWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #8f8f8f;
-  padding: 20px;
-  border-radius: 50%;
-  margin-right: 20px;
-  width: 25px;
-  height: 25px;
+.button {
+  color: #ffffff;
+  margin: 40px 0;
+  border: 1px solid transparent;
+  background-color: $dustyOrange;
+  padding: 23px 18px;
+  display: inline-block;
+}
+
+.button:hover {
+  color: $dustyOrange;
+  background-color: $black;
+  border: 1px solid $dustyOrange;
+}
+
+.buttonWrap {
+  text-align: center;
+}
+
+.spaceComBlogTouch input,
+nav input {
+  opacity: 0;
+  position: absolute;
 }
 
 /**** Header ****/
 
 header {
   min-height: 600px;
+  background: url(../assets/homeImage1.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 1px;
 
   h2 {
-    @include bodyFont (2rem, 2.35rem, 0.05rem, left);
+    @include bodyFont (2.5rem, 2.35rem, 0.05rem, left);
   }
 
   .flexParent {
@@ -89,9 +124,56 @@ header {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  margin: 20px 20px 0 0;
+
   ul {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: -80px;
+    transition: right 1.5s;
+
+    .logo {
+      display: none;
+    }
+
+    a {
+      @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
+
+      &:hover {
+        color: $dustyOrange;
+      }
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
   }
+}
+
+#hamburger:checked~ul {
+  right: 20px;
+}
+
+#hamburger:checked+label i {
+  color: $dustyOrange;
+}
+
+.hamburger {
+  margin-bottom: 20px;
+
+  i {
+    color: $OffWhite;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+    display: block;
+  }
+
 }
 
 .logoWrap {
@@ -102,6 +184,46 @@ nav {
 
 .spaceComBlogTouch {
   background-color: plum;
+  padding: 1px;
+
+  .container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  label {
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    margin: 0 10px;
+    width: calc(25% - 15px);
+  }
+
+  label:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  label:nth-last-of-type(4) {
+    margin-left: 0;
+  }
+
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $rustRed;
+  background-color: $rustRed;
+  padding: 20px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: $OffWhite;
+
+  i {
+    font-size: 1.3rem;
+  }
 }
 
 .iconContent {
@@ -112,12 +234,6 @@ nav {
 
 .iconContent>div {
   display: none;
-}
-
-.spaceComBlogTouch {
-  label {
-    float: left;
-  }
 }
 
 .iconContent {
@@ -131,7 +247,48 @@ nav {
   display: block;
 }
 
-.spaceComBlogTouch input {
-  opacity: 0;
-  position: absolute;
+/**** New location Plan ahead Starts ****/
+
+.newLocPlanAhead {
+  background-color: dodgerblue;
+
+  p {
+    text-align: center;
+  }
+}
+
+/**** Events ****/
+
+.events {
+  background-color: purple;
+}
+
+.events3 {
+  .flexParent {
+    flex-direction: row;
+  }
+
+  .imgContainer {
+    margin-bottom: 40px;
+  }
+
+  .imgContainer:nth-of-type(1) {
+    margin-right: 10px;
+  }
+
+  .imgContainer:nth-of-type(2) {
+    margin-left: 10px;
+  }
+
+  picture {
+    display: none;
+  }
+}
+
+/**** Footer ****/
+
+footer {
+  background-color: $black;
+  margin: 0;
+  padding: 10px 0;
 }

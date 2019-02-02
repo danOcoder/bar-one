@@ -172,7 +172,9 @@ h5,
 p,
 ul,
 li,
-a {
+a,
+label,
+input {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -188,6 +190,9 @@ html {
     125% = units of 20px
      */ }
 
+body {
+  overflow-x: hidden; }
+
 h1 {
   font-family: 'Tulpen One', cursive;
   font-size: 6.5rem;
@@ -196,18 +201,39 @@ h1 {
   text-align: left;
   line-height: 3.5rem; }
 
+h2 {
+  font-family: 'Chathura', sans-serif;
+  color: #ffffff;
+  font-size: 3.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin: 20px 0; }
+
+p {
+  font-family: 'Chathura', sans-serif;
+  color: #ffffff;
+  font-size: 1.9rem;
+  line-height: 1.45rem;
+  letter-spacing: 0.05rem;
+  text-align: center; }
+
 .wrapper {
   max-width: 1600px;
+  margin: 0 auto; }
+
+.container {
+  width: 90%;
   margin: 0 auto; }
 
 .flexParent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
@@ -220,29 +246,38 @@ img {
   max-width: 100%;
   display: block; }
 
-.iconWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 1px solid #8f8f8f;
-  padding: 20px;
-  border-radius: 50%;
-  margin-right: 20px;
-  width: 25px;
-  height: 25px; }
+.button {
+  color: #ffffff;
+  margin: 40px 0;
+  border: 1px solid transparent;
+  background-color: #ff8327;
+  padding: 23px 18px;
+  display: inline-block; }
+
+.button:hover {
+  color: #ff8327;
+  background-color: #111010;
+  border: 1px solid #ff8327; }
+
+.buttonWrap {
+  text-align: center; }
+
+.spaceComBlogTouch input,
+nav input {
+  opacity: 0;
+  position: absolute; }
 
 /**** Header ****/
 header {
-  min-height: 600px; }
+  min-height: 600px;
+  background: url(../assets/homeImage1.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 1px; }
   header h2 {
     font-family: 'Chathura', sans-serif;
-    font-size: 2rem;
+    color: #ffffff;
+    font-size: 2.5rem;
     line-height: 2.35rem;
     letter-spacing: 0.05rem;
     text-align: left; }
@@ -254,24 +289,104 @@ header {
     -ms-flex-align: center;
     align-items: center; }
 
-nav ul {
-  display: none; }
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  text-align: right;
+  margin: 20px 20px 0 0; }
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: -80px;
+    -webkit-transition: right 1.5s;
+    -o-transition: right 1.5s;
+    transition: right 1.5s; }
+    nav ul .logo {
+      display: none; }
+    nav ul a {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 1.9rem;
+      line-height: 1.45rem;
+      letter-spacing: 0.1rem;
+      text-align: right; }
+      nav ul a:hover {
+        color: #ff8327; }
+    nav ul li {
+      margin-bottom: 10px; }
+
+#hamburger:checked ~ ul {
+  right: 20px; }
+
+#hamburger:checked + label i {
+  color: #ff8327; }
+
+.hamburger {
+  margin-bottom: 20px; }
+  .hamburger i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+    display: block; }
 
 .logoWrap {
   margin-top: 200px; }
 
 /**** New space community blog get in touch ****/
 .spaceComBlogTouch {
-  background-color: plum; }
+  background-color: plum;
+  padding: 1px; }
+  .spaceComBlogTouch .container {
+    margin-top: 50px;
+    margin-bottom: 40px; }
+  .spaceComBlogTouch label {
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    margin: 0 10px;
+    width: calc(25% - 15px); }
+  .spaceComBlogTouch label:nth-last-of-type(1) {
+    margin-right: 0; }
+  .spaceComBlogTouch label:nth-last-of-type(4) {
+    margin-left: 0; }
+
+.iconWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #bf2603;
+  background-color: #bf2603;
+  padding: 20px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: #ffffff; }
+  .iconWrap i {
+    font-size: 1.3rem; }
 
 .iconContent .iconWrap {
   display: none; }
 
 .iconContent > div {
   display: none; }
-
-.spaceComBlogTouch label {
-  float: left; }
 
 .iconContent {
   clear: both; }
@@ -282,12 +397,60 @@ nav ul {
 #getInTouch:checked ~ .iconContent .getInTouch {
   display: block; }
 
-.spaceComBlogTouch input {
-  opacity: 0;
-  position: absolute; }
+/**** New location Plan ahead Starts ****/
+.newLocPlanAhead {
+  background-color: dodgerblue; }
+  .newLocPlanAhead p {
+    text-align: center; }
 
-/**** screen meets or exceeds 320 px****/
-/**** screen meets or exceeds 480px****/
+/**** Events ****/
+.events {
+  background-color: purple; }
+
+.events3 .flexParent {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.events3 .imgContainer {
+  margin-bottom: 40px; }
+
+.events3 .imgContainer:nth-of-type(1) {
+  margin-right: 10px; }
+
+.events3 .imgContainer:nth-of-type(2) {
+  margin-left: 10px; }
+
+.events3 picture {
+  display: none; }
+
+/**** Footer ****/
+footer {
+  background-color: #111010;
+  margin: 0;
+  padding: 10px 0; }
+
+@media (min-width: 320px) {
+  /**** Events ****/
+  .events2 .imgContainer {
+    margin: 0 auto;
+    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
+    box-shadow: -15px 15px 0px 4px #ff8327; }
+  .events2 h2 {
+    margin: 40px 0 20px 0; } }
+
+@media (min-width: 480px) {
+  /**** New space community blog get in touch ****/
+  .spaceComBlogTouch .container {
+    width: 70%; }
+  .spaceComBlogTouch .iconWrap {
+    padding: 20px;
+    width: 60px;
+    height: 60px; }
+    .spaceComBlogTouch .iconWrap i {
+      font-size: 2rem; } }
+
 /**** screen meets or exceeds 768px ****/
 /**** screen meets or exceeds 992px****/
 /**** screen meets or exceeds 1400px ****/
