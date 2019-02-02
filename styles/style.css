@@ -180,6 +180,7 @@ a {
 
 /**** Variables ****/
 /**** Mixins ****/
+/**** Global Styles ****/
 html {
   font-size: 125%;
   /*
@@ -189,10 +190,27 @@ html {
 
 h1 {
   font-family: 'Tulpen One', cursive;
-  font-size: fontSize;
-  letter-spacing: letterSpacing;
+  font-size: 6.5rem;
+  letter-spacing: 0.05rem;
   color: #ff8327;
-  text-align: center; }
+  text-align: left;
+  line-height: 3.5rem; }
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto; }
+
+.flexParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .imgContainer {
   overflow: hidden; }
@@ -218,6 +236,33 @@ img {
   margin-right: 20px;
   width: 25px;
   height: 25px; }
+
+/**** Header ****/
+header {
+  min-height: 600px; }
+  header h2 {
+    font-family: 'Chathura', sans-serif;
+    font-size: 2rem;
+    line-height: 2.35rem;
+    letter-spacing: 0.05rem;
+    text-align: left; }
+  header .flexParent {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+nav ul {
+  display: none; }
+
+.logoWrap {
+  margin-top: 200px; }
+
+/**** New space community blog get in touch ****/
+.spaceComBlogTouch {
+  background-color: plum; }
 
 .iconContent .iconWrap {
   display: none; }
