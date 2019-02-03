@@ -186,8 +186,11 @@
   }
 
   .events2 {
-    width: 90%;
     margin: 0 auto 80px;
+
+    .container {
+      width: 90%;
+    }
 
     .imgContainer {
       width: calc(20% - 20px);
@@ -196,7 +199,7 @@
       margin-left: 20px;
     }
 
-    .container {
+    .contentWrap {
       width: calc(80% - 40px);
       margin-left: 40px;
       float: left;

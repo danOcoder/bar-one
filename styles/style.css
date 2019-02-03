@@ -232,7 +232,8 @@ a {
   justify-content: space-between; }
 
 .imgContainer {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0 auto; }
 
 img {
   height: auto;
@@ -435,9 +436,80 @@ footer {
   margin: 0;
   padding: 10px 0; }
 
-@media (min-width: 320px) {
-  .imgContainer {
+#blog {
+  /**** Recent Posts ****/
+  /**** Blog Posts ****/
+  /**** Comments ****/ }
+  #blog header h1 {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 5rem;
+    line-height: 2.35rem;
+    letter-spacing: 0.05rem;
+    text-align: center; }
+  #blog .recentPosts {
+    background-color: plum; }
+    #blog .recentPosts li {
+      text-align: center; }
+    #blog .recentPosts li::before {
+      content: "\2022";
+      /* \2022 is the CSS Code/unicode for a bullet */
+      color: #ff8327;
+      font-weight: 900;
+      display: inline-block;
+      width: 20px;
+      margin-left: -20px; }
+    #blog .recentPosts ul {
+      margin-bottom: 40px; }
+    #blog .recentPosts .button {
+      margin-bottom: 20px; }
+  #blog .blogPosts {
+    background-color: dodgerblue; }
+    #blog .blogPosts h3 {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 1.7rem;
+      line-height: 1.45rem;
+      letter-spacing: 0.05rem;
+      text-align: center;
+      color: #ff8327;
+      margin-bottom: 20px; }
+  #blog .comments {
+    background-color: purple;
+    padding: 1px; }
+    #blog .comments .contentWrap {
+      margin-bottom: 30px; }
+    #blog .comments .imgContainer {
+      margin-bottom: 15px; }
+    #blog .comments h3 {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 1.45rem;
+      letter-spacing: 0.05rem;
+      text-align: center;
+      color: #ff8327;
+      margin-bottom: 20px; }
+  #blog .commentForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  #blog input#post {
+    display: block;
     margin: 0 auto; }
+  #blog input#name,
+  #blog input#email,
+  #blog textarea#comment {
+    width: 100%;
+    padding: 20px; }
+  #blog label {
+    color: #ffffff; }
+
+@media (min-width: 320px) {
   /**** Events ****/
   .events2 .imgContainer {
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
@@ -637,22 +709,23 @@ footer {
     .events1 .container {
       margin-bottom: 80px; }
   .events2 {
-    width: 90%;
     margin: 0 auto 80px; }
+    .events2 .container {
+      width: 90%; }
     .events2 .imgContainer {
       width: calc(20% - 20px);
       float: left;
       margin-top: 10px;
       margin-left: 20px; }
-    .events2 .container {
+    .events2 .contentWrap {
       width: calc(80% - 40px);
       margin-left: 40px;
       float: left; }
-      .events2 .container h2,
-      .events2 .container p,
-      .events2 .container .buttonWrap {
+      .events2 .contentWrap h2,
+      .events2 .contentWrap p,
+      .events2 .contentWrap .buttonWrap {
         text-align: left; }
-      .events2 .container h2 {
+      .events2 .contentWrap h2 {
         margin: 0; }
   .events3 {
     margin: 40px 0; } }

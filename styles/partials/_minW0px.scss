@@ -67,6 +67,7 @@ a {
 
 .imgContainer {
   overflow: hidden;
+  margin: 0 auto;
 }
 
 img {
@@ -298,4 +299,101 @@ footer {
   background-color: $black;
   margin: 0;
   padding: 10px 0;
+}
+
+#blog {
+  header {
+    h1 {
+      @include bodyFont (5rem, 2.35rem, 0.05rem, center);
+    }
+  }
+
+  /**** Recent Posts ****/
+
+  .recentPosts {
+    background-color: plum;
+
+    li {
+      text-align: center;
+    }
+
+    li::before {
+      content: "\2022";
+      /* \2022 is the CSS Code/unicode for a bullet */
+      color: $dustyOrange;
+      font-weight: 900;
+      display: inline-block;
+      width: 20px;
+      margin-left: -20px;
+    }
+
+    ul {
+      margin-bottom: 40px;
+    }
+
+    .button {
+      margin-bottom: 20px;
+    }
+  }
+
+  /**** Blog Posts ****/
+
+  .blogPosts {
+    background-color: dodgerblue;
+
+    h3 {
+      @include bodyFont (1.7rem, 1.45rem, 0.05rem, center);
+      color: $dustyOrange;
+      margin-bottom: 20px;
+    }
+  }
+
+  /**** Comments ****/
+
+  .comments {
+    background-color: purple;
+    padding: 1px;
+
+    .contentWrap {
+      margin-bottom: 30px;
+    }
+
+    .imgContainer {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      @include bodyFont (2rem, 1.45rem, 0.05rem, center);
+      color: $dustyOrange;
+      margin-bottom: 20px;
+    }
+  }
+
+  .commentForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input#post {
+    display: block;
+    margin: 0 auto;
+  }
+
+  input#name,
+  input#email,
+  textarea#comment {
+    width: 100%;
+    padding: 20px;
+  }
+
+  label {
+    color: $OffWhite;
+  }
+
+
+
+
+
+
+
 }
