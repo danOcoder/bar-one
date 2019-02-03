@@ -44,7 +44,8 @@ h2 {
   margin: 20px 0;
 }
 
-p {
+p,
+a {
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
 }
 
@@ -78,15 +79,15 @@ img {
   color: #ffffff;
   margin: 40px 0;
   border: 1px solid transparent;
-  background-color: $dustyOrange;
+  background-color: $rustRed;
   padding: 23px 18px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .button:hover {
-  color: $dustyOrange;
   background-color: $black;
-  border: 1px solid $dustyOrange;
+  border: 1px solid $OffWhite;
 }
 
 .buttonWrap {
@@ -252,6 +253,10 @@ nav {
   display: block;
 }
 
+.deskTopIconMenu {
+  display: none;
+}
+
 /**** New location Plan ahead Starts ****/
 
 .newLocPlanAhead {
@@ -266,6 +271,7 @@ nav {
 
 .events {
   background-color: purple;
+  padding: 1px;
 }
 
 .events3 {

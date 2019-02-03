@@ -6,6 +6,11 @@
     width: 90%;
   }
 
+  .button {
+    margin-top: 20px;
+    padding: 10px 30px;
+  }
+
   /**** Header ****/
 
   header {
@@ -69,4 +74,153 @@
   .mobileIconMenu {
     display: none;
   }
+
+  .deskTopIconMenu {
+    display: block;
+    margin: 150px 0 100px 0;
+
+    .flexParent {
+      flex-direction: row;
+    }
+
+    .flexParent:first-of-type {
+      margin-bottom: 40px;
+    }
+
+    .iconWrap {
+      margin-right: 20px;
+    }
+
+    .contentWrap {
+
+      h2,
+      p {
+        text-align: left;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .iconBlock:nth-of-type(even) {
+    margin-left: 20px;
+  }
+
+  /**** New location plan ahead  ****/
+
+  .newLocPlanAhead {
+    position: relative;
+
+    .flexParent {
+      flex-direction: row;
+    }
+
+    .imgContainer {
+      margin: 0;
+      position: absolute;
+    }
+  }
+
+  .leftContainer {
+    margin-top: 440px;
+    width: 45%;
+
+    .flexParent {
+      flex-direction: column;
+    }
+
+    .imgContainer {
+      top: -50px;
+    }
+
+    .container {
+
+      h2,
+      p,
+      .buttonWrap {
+        text-align: right;
+      }
+    }
+  }
+
+  .rightContainer {
+    margin-bottom: 440px;
+    width: 45%;
+
+    .flexParent {
+      flex-direction: column-reverse;
+    }
+
+    .imgContainer {
+      bottom: -45px;
+    }
+
+    .container {
+
+      h2,
+      p,
+      .buttonWrap {
+        text-align: left;
+      }
+    }
+  }
+
+  /**** Events ****/
+
+  .events1 {
+    margin: 150px 0 100px 0;
+
+    .flexParent {
+      flex-direction: column-reverse;
+    }
+
+    .container {
+      margin-bottom: 80px;
+    }
+  }
+
+  .events2 {
+    width: 90%;
+    margin: 0 auto 80px;
+
+    .imgContainer {
+      width: calc(20% - 20px);
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .container {
+      width: calc(80% - 40px);
+      margin-left: 40px;
+      float: left;
+
+      h2,
+      p,
+      .buttonWrap {
+        text-align: left;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+
+  .events3 {
+    margin: 40px 0;
+
+  }
+
+
+
+
+
+
 }

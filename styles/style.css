@@ -202,7 +202,8 @@ h2 {
   text-align: center;
   margin: 20px 0; }
 
-p {
+p,
+a {
   font-family: 'Chathura', sans-serif;
   color: #ffffff;
   font-size: 1.9rem;
@@ -242,14 +243,14 @@ img {
   color: #ffffff;
   margin: 40px 0;
   border: 1px solid transparent;
-  background-color: #ff8327;
+  background-color: #bf2603;
   padding: 23px 18px;
-  display: inline-block; }
+  display: inline-block;
+  text-transform: uppercase; }
 
 .button:hover {
-  color: #ff8327;
   background-color: #111010;
-  border: 1px solid #ff8327; }
+  border: 1px solid #ffffff; }
 
 .buttonWrap {
   text-align: center; }
@@ -399,6 +400,9 @@ nav {
 #getInTouch:checked ~ .iconContent .getInTouch {
   display: block; }
 
+.deskTopIconMenu {
+  display: none; }
+
 /**** New location Plan ahead Starts ****/
 .newLocPlanAhead {
   background-color: dodgerblue; }
@@ -407,7 +411,8 @@ nav {
 
 /**** Events ****/
 .events {
-  background-color: purple; }
+  background-color: purple;
+  padding: 1px; }
 
 .events3 .flexParent {
   -webkit-box-orient: horizontal;
@@ -502,6 +507,9 @@ footer {
   /**** Global styles ****/
   .container {
     width: 90%; }
+  .button {
+    margin-top: 20px;
+    padding: 10px 30px; }
   /**** Header ****/
   header {
     min-height: 100vh; }
@@ -557,4 +565,94 @@ footer {
     top: 45%; }
   /**** New space community blog get in touch ****/
   .mobileIconMenu {
-    display: none; } }
+    display: none; }
+  .deskTopIconMenu {
+    display: block;
+    margin: 150px 0 100px 0; }
+    .deskTopIconMenu .flexParent {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .deskTopIconMenu .flexParent:first-of-type {
+      margin-bottom: 40px; }
+    .deskTopIconMenu .iconWrap {
+      margin-right: 20px; }
+    .deskTopIconMenu .contentWrap h2,
+    .deskTopIconMenu .contentWrap p {
+      text-align: left; }
+    .deskTopIconMenu .contentWrap h2 {
+      margin: 0; }
+    .deskTopIconMenu .contentWrap p {
+      margin-top: 20px; }
+  .iconBlock:nth-of-type(even) {
+    margin-left: 20px; }
+  /**** New location plan ahead  ****/
+  .newLocPlanAhead {
+    position: relative; }
+    .newLocPlanAhead .flexParent {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .newLocPlanAhead .imgContainer {
+      margin: 0;
+      position: absolute; }
+  .leftContainer {
+    margin-top: 440px;
+    width: 45%; }
+    .leftContainer .flexParent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .leftContainer .imgContainer {
+      top: -50px; }
+    .leftContainer .container h2,
+    .leftContainer .container p,
+    .leftContainer .container .buttonWrap {
+      text-align: right; }
+  .rightContainer {
+    margin-bottom: 440px;
+    width: 45%; }
+    .rightContainer .flexParent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+    .rightContainer .imgContainer {
+      bottom: -45px; }
+    .rightContainer .container h2,
+    .rightContainer .container p,
+    .rightContainer .container .buttonWrap {
+      text-align: left; }
+  /**** Events ****/
+  .events1 {
+    margin: 150px 0 100px 0; }
+    .events1 .flexParent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+    .events1 .container {
+      margin-bottom: 80px; }
+  .events2 {
+    width: 90%;
+    margin: 0 auto 80px; }
+    .events2 .imgContainer {
+      width: calc(20% - 20px);
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px; }
+    .events2 .container {
+      width: calc(80% - 40px);
+      margin-left: 40px;
+      float: left; }
+      .events2 .container h2,
+      .events2 .container p,
+      .events2 .container .buttonWrap {
+        text-align: left; }
+      .events2 .container h2 {
+        margin: 0; }
+  .events3 {
+    margin: 40px 0; } }
