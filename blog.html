@@ -42,31 +42,38 @@
   </header>
   <!-- HEADER ENDS -->
   <!-- MAIN STARTS -->
-  <main class="wrapper">
-    <div class="flexParent">
-      <!-- recent posts starts -->
-      <aside class="recentPosts">
-        <div class="container">
-          <div class="imgContainer">
-            <img src="./assets/sidebarImage.jpg" alt="close up on beer being poured from a tap">
-          </div>
-          <h2>Our Mission</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptates ipsa impedit veritatis dicta
-            eum nulla laboriosam libero magni qui!</p>
-          <div class="buttonWrap">
-            <a href="#" class="button">find out More</a>
-          </div>
-          <h2>Recent Posts</h2>
-          <ul>
-            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-          </ul>
+  <main class="wrapper flexParent">
+    <!-- recent posts starts -->
+    <aside class="recentPosts">
+      <div class="container">
+        <div class="imgContainer">
+          <img src="./assets/sidebarImage.jpg" alt="close up on beer being poured from a tap">
         </div>
-      </aside>
-      <!-- recent posts ends -->
-      <!-- Blog posts starts -->
+        <div class="contentWrap">
+          <div class="ourMission">
+            <h2>Our Mission</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptates ipsa impedit veritatis
+              dicta
+              eum nulla laboriosam libero magni qui!</p>
+            <div class="buttonWrap">
+              <a href="#" class="button">find out More</a>
+            </div>
+          </div>
+          <div class="postList">
+            <h2>Recent Posts</h2>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- recent posts ends -->
+    <!-- Blog posts starts -->
+    <div>
       <section class="blogPosts">
         <div class="container">
           <div class="imgContainer">
@@ -90,52 +97,57 @@
         </div>
       </section>
       <!-- Blog Posts ends -->
+      <!-- Comments Starts -->
+      <section class="comments">
+        <div class="container">
+          <h2>Comments:</h2>
+          <!-- Comment starts -->
+          <div class="comments">
+            <div class="flexParent">
+              <div class="imgContainer">
+                <img src="./assets/commentImage1.jpg" alt="head shot of young woman looking at camera">
+              </div>
+              <div class="contentWrap">
+                <h3>Tuesday October 9th, 2019 by Sulaire</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus laudantium nostrum rerum,
+                  obcaecati natus modi iste ea cumque sit eius odio enim dicta omnis.</p>
+              </div>
+            </div>
+            <div class="flexParent">
+              <div class="imgContainer">
+                <img src="./assets/commentImage2.jpg" alt="head shot of bearded man looking away from camera">
+              </div>
+              <div class="contentWrap">
+                <h3>Wednesday October 10th, 2019 by Renzo</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, optio. Illo illum enim aut sunt
+                  voluptates qui necessitatibus accusamus vitae officia repellendus, id porro optio et itaque nobis
+                  natus
+                  asperiores.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Comment ends -->
+          <!-- Comment form starts -->
+          <form action="#" class="comment">
+            <div class="commentForm clearfix">
+              <div class="name">
+                <label for="name">Name</label>
+                <input id="name" type="text">
+              </div>
+              <div class="email">
+                <label for="email">Email Address</label>
+                <input id="email" type="email">
+              </div>
+            </div>
+            <label for="comment"></label>
+            <textarea name="comment" id="comment" placeholder="Comment" cols="30" rows="5"></textarea>
+            <label for="post"></label>
+            <input class="button" id="post" type="submit" value="Post Comment">
+          </form>
+          <!-- Comment form ends -->
+        </div>
+      </section>
     </div>
-    <!-- Comments Starts -->
-    <section class="comments">
-      <div class="container">
-        <h2>Comments:</h2>
-        <!-- Comment 1 starts -->
-        <div class="flexParent">
-          <div class="imgContainer">
-            <img src="./assets/commentImage1.jpg" alt="head shot of young woman looking at camera">
-          </div>
-          <div class="contentWrap">
-            <h3>Tuesday October 9th, 2019 by Sulaire</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi temporibus laudantium nostrum rerum,
-              obcaecati natus modi iste ea cumque sit eius odio enim dicta omnis.</p>
-          </div>
-        </div>
-        <!-- Comment 1 ends -->
-        <!-- Comment 2 starts -->
-        <div class="flexParent">
-          <div class="imgContainer">
-            <img src="./assets/commentImage2.jpg" alt="head shot of bearded man looking away from camera">
-          </div>
-          <div class="contentWrap">
-            <h3>Wednesday October 10th, 2019 by Renzo</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, optio. Illo illum enim aut sunt
-              voluptates qui necessitatibus accusamus vitae officia repellendus, id porro optio et itaque nobis natus
-              asperiores.</p>
-          </div>
-        </div>
-        <!-- Comment 2 ends -->
-        <!-- Comment form starts -->
-        <form action="#" class="comment">
-          <div class="commentForm">
-            <label for="name">Name</label>
-            <input id="name" type="text">
-            <label for="email">Email Address</label>
-            <input id="email" type="email">
-          </div>
-          <label for="comment"></label>
-          <textarea name="comment" id="comment" placeholder="Comment" cols="30" rows="5"></textarea>
-          <label for="post"></label>
-          <input id="post" type="submit" value="Post Comment">
-        </form>
-        <!-- Comment form ends -->
-      </div>
-    </section>
   </main>
   <!-- MAIN ENDS -->
   <!-- FOOTER STARTS -->

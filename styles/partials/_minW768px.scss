@@ -26,4 +26,24 @@
 
   }
 
+  /**** Blog ****/
+
+  #blog {
+
+    header {
+      h1 {
+        @include bodyFont (6rem, 2.35rem, 0.05rem, center);
+      }
+    }
+
+    .container {
+      width: 70%
+    }
+  }
+
+
+
+
+
+
 }

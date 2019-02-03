@@ -19,4 +19,22 @@
       }
     }
   }
+
+  /**** Blog ****/
+
+  #blog {
+    .blogPosts {
+      .imgContainer {
+        box-shadow: -15px 15px 0px 4px $dustyOrange;
+      }
+    }
+
+    .recentPosts {
+      .imgContainer {
+        box-shadow: 15px 15px 0px 4px $dustyOrange;
+        width: 70%
+      }
+    }
+  }
+
 }

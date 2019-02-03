@@ -178,7 +178,8 @@ input {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style-type: none; }
+  list-style-type: none;
+  border: none; }
 
 /**** Variables ****/
 /**** Mixins ****/
@@ -436,10 +437,13 @@ footer {
   margin: 0;
   padding: 10px 0; }
 
+/**** Blog ****/
 #blog {
   /**** Recent Posts ****/
   /**** Blog Posts ****/
   /**** Comments ****/ }
+  #blog main {
+    background-color: lime; }
   #blog header h1 {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
@@ -448,7 +452,9 @@ footer {
     letter-spacing: 0.05rem;
     text-align: center; }
   #blog .recentPosts {
-    background-color: plum; }
+    background-color: plum;
+    margin-top: 50px;
+    padding: 1px; }
     #blog .recentPosts li {
       text-align: center; }
     #blog .recentPosts li::before {
@@ -464,7 +470,8 @@ footer {
     #blog .recentPosts .button {
       margin-bottom: 20px; }
   #blog .blogPosts {
-    background-color: dodgerblue; }
+    background-color: dodgerblue;
+    padding-bottom: 20px; }
     #blog .blogPosts h3 {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
@@ -474,6 +481,10 @@ footer {
       text-align: center;
       color: #ff8327;
       margin-bottom: 20px; }
+    #blog .blogPosts p {
+      margin-bottom: 20px; }
+    #blog .blogPosts p:last-of-type {
+      margin-bottom: 0; }
   #blog .comments {
     background-color: purple;
     padding: 1px; }
@@ -499,15 +510,85 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column; }
   #blog input#post {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin: 0 auto;
     display: block;
-    margin: 0 auto; }
+    margin-bottom: 40px; }
+  #blog input#name,
+  #blog input#email,
+  #blog textarea#comment {
+    border: none; }
   #blog input#name,
   #blog input#email,
   #blog textarea#comment {
     width: 100%;
-    padding: 20px; }
-  #blog label {
-    color: #ffffff; }
+    padding: 5px;
+    background-color: #111010;
+    min-height: 3rem; }
+  #blog textarea#comment {
+    min-height: 10rem; }
+  #blog input#name:focus,
+  #blog input#email:focus,
+  #blog textarea#comment:focus {
+    color: #ffffff;
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: left; }
+  #blog label,
+  #blog textarea#comment::-webkit-input-placeholder {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px; }
+  #blog label,
+  #blog textarea#comment:-ms-input-placeholder {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px; }
+  #blog label,
+  #blog textarea#comment::-ms-input-placeholder {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px; }
+  #blog label,
+  #blog textarea#comment::placeholder {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.45rem;
+    letter-spacing: 0.05rem;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px; }
+  #blog textarea#comment {
+    border: 2px solid #ff8327; }
+  #blog input#name,
+  #blog input#email {
+    border-bottom: 2px solid #ff8327; }
+  #blog input#name {
+    margin-bottom: 20px; }
 
 @media (min-width: 320px) {
   /**** Events ****/
@@ -527,7 +608,15 @@ footer {
     width: 65px;
     height: 65px; }
     .spaceComBlogTouch .iconWrap i {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+  /**** Blog ****/
+  #blog .blogPosts .imgContainer {
+    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
+    box-shadow: -15px 15px 0px 4px #ff8327; }
+  #blog .recentPosts .imgContainer {
+    -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
+    box-shadow: 15px 15px 0px 4px #ff8327;
+    width: 70%; } }
 
 @media (min-width: 768px) {
   /**** Header ****/
@@ -551,7 +640,17 @@ footer {
     box-shadow: 15px 15px 0px 4px #ff8327; }
   .rightImg {
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-    box-shadow: -15px 15px 0px 4px #ff8327; } }
+    box-shadow: -15px 15px 0px 4px #ff8327; }
+  /**** Blog ****/
+  #blog header h1 {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 6rem;
+    line-height: 2.35rem;
+    letter-spacing: 0.05rem;
+    text-align: center; }
+  #blog .container {
+    width: 70%; } }
 
 @media (min-width: 992px) {
   /**** Global styles ****/
@@ -573,7 +672,44 @@ footer {
   .events3 .imgContainer:nth-of-type(2) {
     margin: 0 20px 40px 20px; }
   .events3 picture {
-    display: block; } }
+    display: block; }
+  /**** Blog ****/
+  #blog .commentForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  #blog .recentPosts .imgContainer {
+    width: 65%; }
+  #blog input,
+  #blog label {
+    display: block; }
+  #blog .name,
+  #blog .email {
+    width: calc(50% - 10px);
+    float: left; }
+  #blog .name {
+    margin-right: 10px; }
+  #blog .email {
+    margin-left: 10px; }
+  #blog textarea#comment {
+    margin-bottom: 30px; }
+  #blog .comments .flexParent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  #blog .comments .imgContianer {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%; }
+  #blog .comments .contentWrap {
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%; }
+    #blog .comments .contentWrap h3,
+    #blog .comments .contentWrap p {
+      text-align: left; }
+    #blog .comments .contentWrap h3 {
+      margin-bottom: 20px; } }
 
 @media (min-width: 1400px) {
   /**** Global styles ****/

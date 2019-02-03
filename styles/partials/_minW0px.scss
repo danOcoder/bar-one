@@ -301,7 +301,14 @@ footer {
   padding: 10px 0;
 }
 
+/**** Blog ****/
+
 #blog {
+
+  main {
+    background-color: lime;
+  }
+
   header {
     h1 {
       @include bodyFont (5rem, 2.35rem, 0.05rem, center);
@@ -312,6 +319,8 @@ footer {
 
   .recentPosts {
     background-color: plum;
+    margin-top: 50px;
+    padding: 1px;
 
     li {
       text-align: center;
@@ -340,11 +349,20 @@ footer {
 
   .blogPosts {
     background-color: dodgerblue;
+    padding-bottom: 20px;
 
     h3 {
       @include bodyFont (1.7rem, 1.45rem, 0.05rem, center);
       color: $dustyOrange;
       margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
 
@@ -375,22 +393,58 @@ footer {
   }
 
   input#post {
-    display: block;
+    @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
     margin: 0 auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  input#name,
+  input#email,
+  textarea#comment {
+    border: none;
   }
 
   input#name,
   input#email,
   textarea#comment {
     width: 100%;
-    padding: 20px;
+    padding: 5px;
+    background-color: $black;
+    min-height: 3rem;
   }
 
-  label {
+  textarea#comment {
+    min-height: 10rem;
+  }
+
+  input#name:focus,
+  input#email:focus,
+  textarea#comment:focus {
     color: $OffWhite;
+    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
   }
 
 
+  label,
+  textarea#comment::placeholder {
+    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+    color: $OffWhite;
+    padding-left: 20px;
+  }
+
+  textarea#comment {
+    border: 2px solid $dustyOrange;
+  }
+
+  input#name,
+  input#email {
+    border-bottom: 2px solid $dustyOrange;
+  }
+
+  input#name {
+    margin-bottom: 20px;
+  }
 
 
 
