@@ -193,14 +193,6 @@ html {
 body {
   overflow-x: hidden; }
 
-h1 {
-  font-family: 'Tulpen One', cursive;
-  font-size: 6.5rem;
-  letter-spacing: 0.05rem;
-  color: #ff8327;
-  text-align: left;
-  line-height: 3.5rem; }
-
 h2 {
   font-family: 'Chathura', sans-serif;
   color: #ffffff;
@@ -274,6 +266,13 @@ header {
   background-size: cover;
   background-position: center center;
   padding: 1px; }
+  header h1 {
+    font-family: 'Tulpen One', cursive;
+    font-size: 6.5rem;
+    letter-spacing: 0.05rem;
+    color: #ff8327;
+    text-align: left;
+    line-height: 3.5rem; }
   header h2 {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
@@ -309,9 +308,9 @@ nav {
     position: absolute;
     top: 70px;
     right: -80px;
-    -webkit-transition: right 1.5s;
-    -o-transition: right 1.5s;
-    transition: right 1.5s; }
+    -webkit-transition: right 1s;
+    -o-transition: right 1s;
+    transition: right 1s; }
     nav ul .logo {
       display: none; }
     nav ul a {
@@ -416,11 +415,8 @@ nav {
 .events3 .imgContainer {
   margin-bottom: 40px; }
 
-.events3 .imgContainer:nth-of-type(1) {
-  margin-right: 10px; }
-
 .events3 .imgContainer:nth-of-type(2) {
-  margin-left: 10px; }
+  margin-left: 20px; }
 
 .events3 picture {
   display: none; }
@@ -432,25 +428,69 @@ footer {
   padding: 10px 0; }
 
 @media (min-width: 320px) {
+  .imgContainer {
+    margin: 0 auto; }
   /**** Events ****/
   .events2 .imgContainer {
-    margin: 0 auto;
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
     box-shadow: -15px 15px 0px 4px #ff8327; }
   .events2 h2 {
     margin: 40px 0 20px 0; } }
 
 @media (min-width: 480px) {
+  /**** Global styles ****/
+  .container {
+    width: 80%; }
   /**** New space community blog get in touch ****/
-  .spaceComBlogTouch .container {
-    width: 70%; }
   .spaceComBlogTouch .iconWrap {
-    padding: 20px;
-    width: 60px;
-    height: 60px; }
+    padding: 30px;
+    width: 65px;
+    height: 65px; }
     .spaceComBlogTouch .iconWrap i {
       font-size: 2rem; } }
 
-/**** screen meets or exceeds 768px ****/
+@media (min-width: 768px) {
+  /**** Header ****/
+  header h1 {
+    font-family: 'Tulpen One', cursive;
+    font-size: 13.05rem;
+    letter-spacing: 0.7rem;
+    color: #ff8327;
+    text-align: left;
+    line-height: 3.5rem; }
+  header h2 {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 4.15rem;
+    line-height: 5rem;
+    letter-spacing: 0.1rem;
+    text-align: left; }
+  /**** New location plan ahead starts  ****/
+  .leftImg {
+    -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
+    box-shadow: 15px 15px 0px 4px #ff8327; }
+  .rightImg {
+    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
+    box-shadow: -15px 15px 0px 4px #ff8327; } }
+
 /**** screen meets or exceeds 992px****/
+@media (min-width: 992px) {
+  /**** Global styles ****/
+  .container {
+    width: 70%; }
+  /**** Events ****/
+  .events3 .flexParent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .events3 .imgContainer {
+    margin-bottom: 40px; }
+  .events3 .imgContainer:nth-of-type(1) {
+    margin: 0 0 40px 0; }
+  .events3 .imgContainer:nth-of-type(2) {
+    margin: 0 20px 40px 20px; }
+  .events3 picture {
+    display: block; } }
+
 /**** screen meets or exceeds 1400px ****/

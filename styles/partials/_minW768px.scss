@@ -1,3 +1,29 @@
-/**** screen meets or exceeds 768px ****/
+@media (min-width: 768px) {
 
-@media (min-width: 768px) {}
+  /**** Header ****/
+
+  header {
+    h1 {
+      @include headingFont(13.05rem, 0.7rem);
+      line-height: 3.5rem;
+    }
+
+    h2 {
+      @include bodyFont (4.15rem, 5rem, 0.1rem, left);
+    }
+  }
+
+
+
+  /**** New location plan ahead starts  ****/
+  .leftImg {
+    box-shadow: 15px 15px 0px 4px $dustyOrange;
+
+  }
+
+  .rightImg {
+    box-shadow: -15px 15px 0px 4px $dustyOrange;
+
+  }
+
+}

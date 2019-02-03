@@ -39,11 +39,6 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  @include headingFont(6.5rem, 0.05rem);
-  line-height: 3.5rem;
-}
-
 h2 {
   @include bodyFont (3.4rem, 2.9rem, 0.1rem, center);
   margin: 20px 0;
@@ -113,6 +108,12 @@ header {
   background-position: center center;
   padding: 1px;
 
+  h1 {
+    @include headingFont(6.5rem, 0.05rem);
+    line-height: 3.5rem;
+  }
+
+
   h2 {
     @include bodyFont (2.5rem, 2.35rem, 0.05rem, left);
   }
@@ -135,7 +136,7 @@ nav {
     position: absolute;
     top: 70px;
     right: -80px;
-    transition: right 1.5s;
+    transition: right 1s;
 
     .logo {
       display: none;
@@ -272,12 +273,8 @@ nav {
     margin-bottom: 40px;
   }
 
-  .imgContainer:nth-of-type(1) {
-    margin-right: 10px;
-  }
-
   .imgContainer:nth-of-type(2) {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
   picture {

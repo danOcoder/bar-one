@@ -1,3 +1,38 @@
 /**** screen meets or exceeds 992px****/
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+  /**** Global styles ****/
+  .container {
+    width: 70%;
+  }
+
+  header {
+    
+  }
+
+  /**** Events ****/
+
+  .events3 {
+    .flexParent {
+      flex-direction: row;
+    }
+
+    .imgContainer {
+      margin-bottom: 40px;
+    }
+
+    .imgContainer:nth-of-type(1) {
+      margin: 0 0 40px 0;
+    }
+
+    .imgContainer:nth-of-type(2) {
+      margin: 0 20px 40px 20px;
+
+    }
+
+    picture {
+      display: block;
+    }
+  }
+}
