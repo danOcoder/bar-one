@@ -1,3 +1,72 @@
-/**** screen meets or exceeds 1400px ****/
+@media (min-width: 1400px) {
 
-@media (min-width: 1400px) {}
+  /**** Global styles ****/
+
+  .container {
+    width: 90%;
+  }
+
+  /**** Header ****/
+
+  header {
+    min-height: 100vh;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      margin-top: 30px;
+
+      li {
+        margin: 0 40px;
+      }
+
+      .logo {
+        display: block;
+
+        h2 {
+          line-height: 0px;
+        }
+      }
+
+      a {
+        @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
+
+        &:hover {
+          color: $dustyOrange;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+  }
+
+  .logoWrap {
+    margin-top: 250px;
+    z-index: 99;
+  }
+
+  .headerOverlay {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 45%
+  }
+
+  /**** New space community blog get in touch ****/
+
+  .mobileIconMenu {
+    display: none;
+  }
+}

@@ -343,6 +343,9 @@ nav {
 .logoWrap {
   margin-top: 200px; }
 
+.headerOverlay {
+  display: none; }
+
 /**** New space community blog get in touch ****/
 .spaceComBlogTouch {
   background-color: plum;
@@ -473,12 +476,14 @@ footer {
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
     box-shadow: -15px 15px 0px 4px #ff8327; } }
 
-/**** screen meets or exceeds 992px****/
 @media (min-width: 992px) {
   /**** Global styles ****/
   .container {
     width: 70%; }
   /**** Events ****/
+  /**** Headrr ****/
+  header {
+    min-height: 700px; }
   .events3 .flexParent {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -493,4 +498,63 @@ footer {
   .events3 picture {
     display: block; } }
 
-/**** screen meets or exceeds 1400px ****/
+@media (min-width: 1400px) {
+  /**** Global styles ****/
+  .container {
+    width: 90%; }
+  /**** Header ****/
+  header {
+    min-height: 100vh; }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+    nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: static;
+      margin-top: 30px; }
+      nav ul li {
+        margin: 0 40px; }
+      nav ul .logo {
+        display: block; }
+        nav ul .logo h2 {
+          line-height: 0px; }
+      nav ul a {
+        font-family: 'Chathura', sans-serif;
+        color: #ffffff;
+        font-size: 1.9rem;
+        line-height: 1.45rem;
+        letter-spacing: 0.1rem;
+        text-align: right; }
+        nav ul a:hover {
+          color: #ff8327; }
+  .hamburger {
+    display: none; }
+  .logoWrap {
+    margin-top: 250px;
+    z-index: 99; }
+  .headerOverlay {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 45%; }
+  /**** New space community blog get in touch ****/
+  .mobileIconMenu {
+    display: none; } }
