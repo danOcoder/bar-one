@@ -40,4 +40,31 @@
     }
   }
 
+  /**** CONTACT ****/
+
+  #contact {
+
+    .contactDetails {
+      .container {
+        width: 70%;
+      }
+
+      ul {
+        width: 80%;
+        margin: 0 auto 15px;
+      }
+    }
+
+    form {
+      margin: 40px auto 40px;
+      width: 85%;
+      box-shadow: -15px 15px 0px 4px $dustyOrange;
+    }
+  }
+
+
+
+
+
+
 }

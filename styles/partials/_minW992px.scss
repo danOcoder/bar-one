@@ -100,4 +100,76 @@
 
   }
 
+  /**** CONACT ****/
+
+  #contact {
+    main {
+      .container {
+        width: 90%;
+      }
+
+      .flexParent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+      }
+    }
+
+    form {
+      width: calc(70% - 20px);
+      margin: 0 0 20px 0;
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+    }
+
+    .contactForm {
+      flex-direction: row;
+    }
+
+    input,
+    label {
+      display: block;
+    }
+
+    .name,
+    .email {
+      width: calc(50% - 10px);
+      float: left;
+    }
+
+    .name {
+      margin-right: 10px;
+    }
+
+    .email {
+      margin-left: 10px;
+    }
+
+    .contactDetails {
+      width: calc(30% - 20px);
+      margin: 200px 20px 0 0;
+      display: flex;
+      flex-direction: column;
+
+      .container {
+        width: 100%;
+        max-width: 250px;
+        margin: 0;
+        align-self: flex-end;
+      }
+
+      ul {
+        width: 100%;
+      }
+
+      a {
+        text-align: left;
+      }
+
+    }
+
+  }
+
 }

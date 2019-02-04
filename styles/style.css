@@ -296,7 +296,6 @@ textarea#comment,
 textarea#message {
   width: 100%;
   padding: 5px;
-  background-color: #111010;
   min-height: 3rem; }
 
 textarea#comment,
@@ -314,14 +313,6 @@ textarea#message:focus {
   line-height: 1.45rem;
   letter-spacing: 0.05rem;
   text-align: left; }
-
-textarea#comment,
-textarea#message {
-  border: 2px solid #ff8327; }
-
-input#name,
-input#email {
-  border-bottom: 2px solid #ff8327; }
 
 input#name {
   margin-bottom: 20px; }
@@ -569,6 +560,15 @@ footer {
       text-align: center;
       color: #ff8327;
       margin-bottom: 20px; }
+  #blog input#name,
+  #blog input#email,
+  #blog textarea#comment {
+    background-color: #111010; }
+  #blog input#name,
+  #blog input#email {
+    border-bottom: 2px solid #ff8327; }
+  #blog textarea#comment {
+    border: 2px solid #ff8327; }
   #blog label,
   #blog textarea#comment::-webkit-input-placeholder {
     font-family: 'Chathura', sans-serif;
@@ -613,7 +613,9 @@ footer {
 /**** CONTACT ****/
 #contact {
   /**** header ****/
-  /**** Form ****/ }
+  /**** Main ****/
+  /**** Form ****/
+  /**** contact details ****/ }
   #contact header {
     background: url(../assets/contactHeader2.jpg);
     min-height: 600px; }
@@ -624,6 +626,22 @@ footer {
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: center; }
+  #contact main {
+    background-color: plum;
+    padding: 1px; }
+  #contact form {
+    background-color: purple;
+    margin: 40px 0 20px 0;
+    padding: 10px; }
+  #contact input#name,
+  #contact input#email,
+  #contact textarea#message {
+    background-color: purple; }
+  #contact input#name,
+  #contact input#email {
+    border-bottom: 2px solid #ffffff; }
+  #contact textarea#message {
+    border: 2px solid #ffffff; }
   #contact label,
   #contact textarea#message::-webkit-input-placeholder {
     font-family: 'Chathura', sans-serif;
@@ -664,6 +682,33 @@ footer {
     text-align: left;
     color: #ffffff;
     padding-left: 20px; }
+  #contact .contactDetails {
+    background-color: lime; }
+    #contact .contactDetails ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+    #contact .contactDetails li {
+      text-align: center; }
+    #contact .contactDetails i {
+      font-size: 1.5rem; }
+    #contact .contactDetails a {
+      display: block;
+      text-align: center; }
+  #contact .email {
+    margin-bottom: 20px; }
+  #contact .phone {
+    margin-bottom: 10px; }
+  #contact .address {
+    margin-bottom: 20px; }
 
 @media (min-width: 320px) {
   /**** Events ****/
@@ -693,7 +738,18 @@ footer {
     #blog .recentPosts .imgContainer {
       -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
       box-shadow: 15px 15px 0px 4px #ff8327;
-      width: 70%; } }
+      width: 70%; }
+  /**** CONTACT ****/
+  #contact .contactDetails .container {
+    width: 70%; }
+  #contact .contactDetails ul {
+    width: 80%;
+    margin: 0 auto 15px; }
+  #contact form {
+    margin: 40px auto 40px;
+    width: 85%;
+    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
+    box-shadow: -15px 15px 0px 4px #ff8327; } }
 
 @media (min-width: 768px) {
   /**** Header ****/
@@ -729,7 +785,17 @@ footer {
       letter-spacing: 0.05rem;
       text-align: center; }
     #blog .container {
-      width: 70%; } }
+      width: 70%; }
+  /**** CONTACT ****/
+  #contact {
+    /**** Header ****/ }
+    #contact header h1 {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 6rem;
+      line-height: 2.35rem;
+      letter-spacing: 0.05rem;
+      text-align: center; } }
 
 @media (min-width: 992px) {
   /**** Global styles ****/
@@ -790,7 +856,64 @@ footer {
       #blog .comments .contentWrap p {
         text-align: left; }
       #blog .comments .contentWrap h3 {
-        margin-bottom: 20px; } }
+        margin-bottom: 20px; }
+  /**** CONACT ****/
+  #contact main .container {
+    width: 90%; }
+  #contact main .flexParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative; }
+  #contact form {
+    width: calc(70% - 20px);
+    margin: 0 0 20px 0;
+    position: absolute;
+    bottom: 50px;
+    right: 0; }
+  #contact .contactForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  #contact input,
+  #contact label {
+    display: block; }
+  #contact .name,
+  #contact .email {
+    width: calc(50% - 10px);
+    float: left; }
+  #contact .name {
+    margin-right: 10px; }
+  #contact .email {
+    margin-left: 10px; }
+  #contact .contactDetails {
+    width: calc(30% - 20px);
+    margin: 200px 20px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #contact .contactDetails .container {
+      width: 100%;
+      max-width: 250px;
+      margin: 0;
+      -ms-flex-item-align: end;
+      align-self: flex-end; }
+    #contact .contactDetails ul {
+      width: 100%; }
+    #contact .contactDetails a {
+      text-align: left; } }
 
 @media (min-width: 1400px) {
   /**** Global styles ****/

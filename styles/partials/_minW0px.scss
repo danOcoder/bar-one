@@ -128,7 +128,6 @@ textarea#comment,
 textarea#message {
   width: 100%;
   padding: 5px;
-  background-color: $black;
   min-height: 3rem;
 }
 
@@ -143,16 +142,6 @@ textarea#comment:focus,
 textarea#message:focus {
   color: $OffWhite;
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
-}
-
-textarea#comment,
-textarea#message {
-  border: 2px solid $dustyOrange;
-}
-
-input#name,
-input#email {
-  border-bottom: 2px solid $dustyOrange;
 }
 
 input#name {
@@ -458,6 +447,22 @@ footer {
     }
   }
 
+  input#name,
+  input#email,
+  textarea#comment {
+    background-color: $black;
+  }
+
+  input#name,
+  input#email {
+    border-bottom: 2px solid $dustyOrange;
+  }
+
+
+  textarea#comment {
+    border: 2px solid $dustyOrange;
+  }
+
   label,
   textarea#comment::placeholder {
     @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
@@ -466,7 +471,6 @@ footer {
   }
 
 }
-
 
 /**** CONTACT ****/
 
@@ -484,7 +488,36 @@ footer {
     min-height: 600px;
   }
 
+  /**** Main ****/
+
+  main {
+    background-color: plum;
+    padding: 1px;
+  }
+
   /**** Form ****/
+
+  form {
+    background-color: purple;
+    margin: 40px 0 20px 0;
+    padding: 10px;
+  }
+
+  input#name,
+  input#email,
+  textarea#message {
+    background-color: purple;
+  }
+
+  input#name,
+  input#email {
+    border-bottom: 2px solid $OffWhite;
+  }
+
+
+  textarea#message {
+    border: 2px solid $OffWhite;
+  }
 
   label,
   textarea#message::placeholder {
@@ -493,6 +526,42 @@ footer {
     padding-left: 20px;
   }
 
+  /**** contact details ****/
 
+  .contactDetails {
+    background-color: lime;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .email {
+    margin-bottom: 20px;
+  }
+
+  .phone {
+    margin-bottom: 10px;
+  }
+
+  .address {
+    margin-bottom: 20px;
+  }
 
 }
