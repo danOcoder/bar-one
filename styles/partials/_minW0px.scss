@@ -190,7 +190,7 @@ nav {
 /**** New space community blog get in touch ****/
 
 .spaceComBlogTouch {
-  background-color: plum;
+  background-color: $black;
   padding: 1px;
 
   .container {
@@ -261,7 +261,7 @@ nav {
 /**** New location Plan ahead Starts ****/
 
 .newLocPlanAhead {
-  background-color: dodgerblue;
+  background-color: $darkRed;
 
   p {
     text-align: center;
@@ -271,11 +271,13 @@ nav {
 /**** Events ****/
 
 .events {
-  background-color: purple;
+  background-color: $black;
   padding: 1px;
 }
 
 .events3 {
+  background-color: $darkRed;
+
   .flexParent {
     flex-direction: row;
   }
@@ -296,7 +298,7 @@ nav {
 /**** Footer ****/
 
 footer {
-  background-color: $black;
+  background-color: $darkRed;
   margin: 0;
   padding: 10px 0;
 }
@@ -306,21 +308,29 @@ footer {
 #blog {
 
   main {
-    background-color: lime;
+    background-color: $black;
   }
 
   header {
+    background: url(../assets/blogHeader1.jpg);
+
     h1 {
       @include bodyFont (5rem, 2.35rem, 0.05rem, center);
     }
+
+    min-height: 600px;
   }
 
   /**** Recent Posts ****/
 
   .recentPosts {
-    background-color: plum;
+
     margin-top: 50px;
     padding: 1px;
+
+    .container {
+      background-color: $darkRed;
+    }
 
     li {
       text-align: center;
@@ -347,9 +357,12 @@ footer {
 
   /**** Blog Posts ****/
 
+  .blogMain {
+    background-color: $black;
+  }
+
   .blogPosts {
-    background-color: dodgerblue;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 
     h3 {
       @include bodyFont (1.7rem, 1.45rem, 0.05rem, center);
@@ -369,7 +382,7 @@ footer {
   /**** Comments ****/
 
   .comments {
-    background-color: purple;
+    background-color: $black;
     padding: 1px;
 
     .contentWrap {
