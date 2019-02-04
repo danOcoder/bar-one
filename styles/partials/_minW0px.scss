@@ -101,7 +101,65 @@ nav input {
   position: absolute;
 }
 
-/**** Header ****/
+.commentForm,
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input#post,
+input#submit {
+  @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 40px;
+}
+
+input#name,
+input#email,
+textarea#comment,
+textarea#message {
+  border: none;
+}
+
+input#name,
+input#email,
+textarea#comment,
+textarea#message {
+  width: 100%;
+  padding: 5px;
+  background-color: $black;
+  min-height: 3rem;
+}
+
+textarea#comment,
+textarea#message {
+  min-height: 10rem;
+}
+
+input#name:focus,
+input#email:focus,
+textarea#comment:focus,
+textarea#message:focus {
+  color: $OffWhite;
+  @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+}
+
+textarea#comment,
+textarea#message {
+  border: 2px solid $dustyOrange;
+}
+
+input#name,
+input#email {
+  border-bottom: 2px solid $dustyOrange;
+}
+
+input#name {
+  margin-bottom: 20px;
+}
+
+/**** Home Header ****/
 
 header {
   min-height: 600px;
@@ -258,7 +316,7 @@ nav {
   display: none;
 }
 
-/**** New location Plan ahead Starts ****/
+/**** New location Plan ahead ****/
 
 .newLocPlanAhead {
   background-color: $darkRed;
@@ -303,7 +361,7 @@ footer {
   padding: 10px 0;
 }
 
-/**** Blog ****/
+/**** BLOG ****/
 
 #blog {
 
@@ -355,7 +413,7 @@ footer {
     }
   }
 
-  /**** Blog Posts ****/
+  /**** Blog main ****/
 
   .blogMain {
     background-color: $black;
@@ -400,45 +458,6 @@ footer {
     }
   }
 
-  .commentForm {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input#post {
-    @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 40px;
-  }
-
-  input#name,
-  input#email,
-  textarea#comment {
-    border: none;
-  }
-
-  input#name,
-  input#email,
-  textarea#comment {
-    width: 100%;
-    padding: 5px;
-    background-color: $black;
-    min-height: 3rem;
-  }
-
-  textarea#comment {
-    min-height: 10rem;
-  }
-
-  input#name:focus,
-  input#email:focus,
-  textarea#comment:focus {
-    color: $OffWhite;
-    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
-  }
-
-
   label,
   textarea#comment::placeholder {
     @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
@@ -446,20 +465,33 @@ footer {
     padding-left: 20px;
   }
 
-  textarea#comment {
-    border: 2px solid $dustyOrange;
+}
+
+
+/**** CONTACT ****/
+
+#contact {
+
+  /**** header ****/
+
+  header {
+    background: url(../assets/contactHeader2.jpg);
+
+    h1 {
+      @include bodyFont (5rem, 2.35rem, 0.05rem, center);
+    }
+
+    min-height: 600px;
   }
 
-  input#name,
-  input#email {
-    border-bottom: 2px solid $dustyOrange;
+  /**** Form ****/
+
+  label,
+  textarea#message::placeholder {
+    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+    color: $OffWhite;
+    padding-left: 20px;
   }
-
-  input#name {
-    margin-bottom: 20px;
-  }
-
-
 
 
 

@@ -5,13 +5,13 @@
     width: 70%;
   }
 
-  /**** Events ****/
-
-  /**** Headrr ****/
+  /**** Header ****/
 
   header {
     min-height: 700px;
   }
+
+  /**** Events ****/
 
   .events3 {
     .flexParent {
@@ -36,9 +36,12 @@
     }
   }
 
-  /**** Blog ****/
+  /**** BLOG ****/
 
   #blog {
+
+    /**** comments ****/
+
     .commentForm {
       flex-direction: row;
     }
