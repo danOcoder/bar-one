@@ -259,12 +259,8 @@ img {
 
 .spaceComBlogTouch input,
 nav input {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden; }
+  opacity: 0;
+  position: absolute; }
 
 .commentForm,
 .contactForm {
@@ -339,9 +335,10 @@ header {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 2.5rem;
-    line-height: 2.35rem;
-    letter-spacing: 0.05rem;
-    text-align: left; }
+    line-height: 5rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    margin: 0; }
   header .flexParent {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -361,9 +358,6 @@ nav {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   text-align: right;
   margin: 20px 20px 0 0; }
   nav label {
@@ -374,11 +368,22 @@ nav {
     right: -95px;
     -webkit-transition: right 600ms;
     -o-transition: right 600ms;
-    transition: right 600ms; }
+    transition: right 600ms;
+    -webkit-transition-timing-function: cubic-bezier(0.33, -0.01, 0.18, 0.94);
+    -o-transition-timing-function: cubic-bezier(0.33, -0.01, 0.18, 0.94);
+    transition-timing-function: cubic-bezier(0.33, -0.01, 0.18, 0.94); }
     nav ul li {
       margin-bottom: 25px; }
     nav ul .logo {
       display: none; }
+      nav ul .logo h2 {
+        font-family: 'Tulpen One', cursive;
+        font-size: 3rem;
+        letter-spacing: 0rem;
+        color: #ff8327;
+        text-align: left;
+        color: #ffffff;
+        margin: 0; }
     nav ul a {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
@@ -762,12 +767,13 @@ footer {
     letter-spacing: 0.7rem;
     color: #ff8327;
     text-align: left;
-    line-height: 3.5rem; }
+    line-height: 3.5rem;
+    padding-bottom: 20px; }
   header h2 {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 4.15rem;
-    line-height: 5rem;
+    line-height: 5.5rem;
     letter-spacing: 0.1rem;
     text-align: left; }
   /**** New location plan ahead starts  ****/
@@ -949,9 +955,9 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     text-align: center; }
     nav ul {
       display: -webkit-box;
@@ -981,7 +987,7 @@ footer {
   .hamburger {
     display: none; }
   .logoWrap {
-    margin-top: 250px;
+    margin-top: 350px;
     z-index: 99; }
   .headerOverlay {
     display: block;
