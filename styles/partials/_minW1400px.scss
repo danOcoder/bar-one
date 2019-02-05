@@ -7,7 +7,6 @@
   }
 
   .button {
-    margin-top: 20px;
     padding: 10px 30px;
   }
 
@@ -15,46 +14,14 @@
 
   header {
     min-height: 100vh;
-  }
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      position: static;
-      margin-top: 30px;
-
-      li {
-        margin: 0 40px;
-      }
-
-      .logo {
-        display: block;
-
-        h2 {
-          line-height: 0px;
-        }
-      }
-
-      a {
-        @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
-
-        &:hover {
-          color: $dustyOrange;
+    nav {
+      ul {
+        li {
+          margin: 0 40px;
         }
       }
     }
-  }
-
-  .hamburger {
-    display: none;
-
   }
 
   .logoWrap {
@@ -174,7 +141,6 @@
   /**** Events ****/
 
   .events1 {
-    margin: 150px 0 100px 0;
 
     .flexParent {
       flex-direction: column-reverse;
@@ -186,7 +152,7 @@
   }
 
   .events2 {
-    margin: 0 auto 80px;
+    margin: 0 auto;
 
     .container {
       width: 90%;
@@ -216,13 +182,7 @@
     }
   }
 
-  .events3 {
-    margin: 40px 0;
-
-  }
-
   /**** BLOG ****/
-
 
   #blog {
 
@@ -234,15 +194,8 @@
 
     /**** Header ****/
 
-    header {
-      .flexParent {
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-    }
-
-    h1 {
-      text-align: left;
+    .logoWrap {
+      margin-top: 200px;
     }
 
     /**** Main ****/

@@ -12,18 +12,95 @@
     h2 {
       @include bodyFont (4.15rem, 5.5rem, 0.1rem, left);
     }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin-top: 50px;
+
+        li {
+          margin: 0 30px;
+        }
+
+        .logo {
+          display: block;
+
+          h2 {
+            line-height: 0px;
+          }
+        }
+
+        a {
+          @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
+
+          &:hover {
+            color: $dustyOrange;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+    }
   }
 
   /**** New location plan ahead starts  ****/
 
+  .newLocPlanAhead {
+    h2 {
+      padding-top: 40px;
+    }
+  }
+
+
   .leftImg {
     box-shadow: 15px 15px 0px 4px $dustyOrange;
-
   }
 
   .rightImg {
     box-shadow: -15px 15px 0px 4px $dustyOrange;
+  }
 
+  /**** Events ****/
+
+  .events2 {
+
+    .container {
+      width: 90%;
+    }
+
+    .imgContainer {
+      width: calc(30% - 20px);
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .contentWrap {
+      width: calc(70% - 40px);
+      margin-left: 40px;
+      float: left;
+
+      h2,
+      p,
+      .buttonWrap {
+        text-align: left;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
   }
 
   /**** BLOG ****/
@@ -33,13 +110,25 @@
     /**** Header ****/
 
     header {
+
       h1 {
-        @include bodyFont (6rem, 2.35rem, 0.05rem, center);
+        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
+      }
+
+      .flexParent {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .container {
+        width: 70%
       }
     }
 
-    .container {
-      width: 70%
+    .recentPosts {
+      .imgContainer {
+        width: 60%;
+      }
     }
   }
 
@@ -51,7 +140,12 @@
 
     header {
       h1 {
-        @include bodyFont (6rem, 2.35rem, 0.05rem, center);
+        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
+      }
+
+      .flexParent {
+        justify-content: flex-start;
+        align-items: flex-start;
       }
     }
 
@@ -61,10 +155,4 @@
       }
     }
   }
-
-
-
-
-
-
 }

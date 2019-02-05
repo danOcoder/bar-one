@@ -78,7 +78,6 @@ img {
 
 .button {
   color: #ffffff;
-  margin: 40px 0;
   border: 1px solid transparent;
   background-color: $rustRed;
   padding: 23px 18px;
@@ -115,7 +114,6 @@ input#submit {
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
   margin: 0 auto;
   display: block;
-  margin-bottom: 40px;
 }
 
 input#name,
@@ -147,8 +145,10 @@ textarea#message:focus {
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
 }
 
-input#name {
-  margin-bottom: 20px;
+.name,
+.email,
+textarea#message {
+  padding-bottom: 30px;
 }
 
 /**** Home Header ****/
@@ -167,7 +167,7 @@ header {
 
 
   h2 {
-    @include bodyFont (2.5rem, 5rem, 0.1rem, left);
+    @include bodyFont (2.5rem, 2.5rem, 0.1rem, left);
     margin: 0;
   }
 
@@ -256,8 +256,7 @@ nav {
   padding: 1px;
 
   .container {
-    margin-top: 50px;
-    margin-bottom: 40px;
+    padding: 50px 0 40px 0;
   }
 
   label {
@@ -296,6 +295,13 @@ nav {
 }
 
 .iconContent {
+  clear: both;
+
+  h2 {
+    margin: 0;
+    padding: 20px 0;
+  }
+
   .iconWrap {
     display: none;
   }
@@ -303,10 +309,6 @@ nav {
 
 .iconContent>div {
   display: none;
-}
-
-.iconContent {
-  clear: both;
 }
 
 #newSpace:checked~.iconContent .newSpace,
@@ -324,9 +326,22 @@ nav {
 
 .newLocPlanAhead {
   background-color: $darkRed;
+  padding: 50px 0 40px 0;
 
   p {
     text-align: center;
+  }
+}
+
+.leftContainer {
+  .buttonWrap {
+    padding: 40px 0;
+  }
+}
+
+.rightContainer {
+  .buttonWrap {
+    padding-top: 40px;
   }
 }
 
@@ -337,15 +352,28 @@ nav {
   padding: 1px;
 }
 
+.events1 {
+  padding: 50px 0 40px 0;
+
+  .buttonWrap {
+    padding-top: 40px;
+  }
+}
+
+.events2 {
+  padding: 50px 0 40px 0;
+
+  .buttonWrap {
+    padding-top: 40px;
+  }
+}
+
 .events3 {
   background-color: $darkRed;
+  padding: 50px 0 40px 0;
 
   .flexParent {
     flex-direction: row;
-  }
-
-  .imgContainer {
-    margin-bottom: 40px;
   }
 
   .imgContainer:nth-of-type(2) {
@@ -387,11 +415,9 @@ footer {
 
   .recentPosts {
 
-    margin-top: 50px;
-    padding: 1px;
-
     .container {
       background-color: $darkRed;
+      padding: 50px 20px 40px 20px;
     }
 
     li {
@@ -408,12 +434,8 @@ footer {
       margin-left: -20px;
     }
 
-    ul {
-      margin-bottom: 40px;
-    }
-
-    .button {
-      margin-bottom: 20px;
+    .buttonWrap {
+      padding-top: 20px;
     }
   }
 
@@ -424,7 +446,8 @@ footer {
   }
 
   .blogPosts {
-    margin-bottom: 20px;
+
+    padding: 50px 0 40px 0;
 
     h3 {
       @include bodyFont (1.7rem, 1.45rem, 0.05rem, center);
@@ -445,7 +468,10 @@ footer {
 
   .comments {
     background-color: $black;
-    padding: 1px;
+
+    .commentWrap {
+      padding: 50px 0 40px 0;
+    }
 
     .contentWrap {
       margin-bottom: 30px;
@@ -460,6 +486,10 @@ footer {
       color: $dustyOrange;
       margin-bottom: 20px;
     }
+  }
+
+  form {
+    padding: 50px 0 40px 0;
   }
 
   input#name,
@@ -536,7 +566,7 @@ footer {
 
   label,
   textarea#message::placeholder {
-    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+    @include bodyFont (1.9rem, 2rem, 0.05rem, left);
     color: $OffWhite;
     padding-left: 20px;
   }

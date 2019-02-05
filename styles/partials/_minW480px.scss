@@ -20,9 +20,26 @@
     }
   }
 
+  /**** Events ****/
+
+  .events2 {
+    .imgContainer {
+      width: 55%;
+    }
+  }
+
   /**** BLOG ****/
 
   #blog {
+
+    /**** Header ****/
+
+    header {
+      h1 {
+        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
+      }
+    }
+
 
     /**** Blog main ****/
 
@@ -58,10 +75,5 @@
       box-shadow: 15px 15px 0px 4px $dustyOrange;
     }
   }
-
-
-
-
-
 
 }

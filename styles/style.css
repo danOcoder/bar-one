@@ -243,7 +243,6 @@ img {
 
 .button {
   color: #ffffff;
-  margin: 40px 0;
   border: 1px solid transparent;
   background-color: #bf2603;
   padding: 23px 18px;
@@ -281,8 +280,7 @@ input#submit {
   letter-spacing: 0.05rem;
   text-align: center;
   margin: 0 auto;
-  display: block;
-  margin-bottom: 40px; }
+  display: block; }
 
 input#name,
 input#email,
@@ -314,8 +312,10 @@ textarea#message:focus {
   letter-spacing: 0.05rem;
   text-align: left; }
 
-input#name {
-  margin-bottom: 20px; }
+.name,
+.email,
+textarea#message {
+  padding-bottom: 30px; }
 
 /**** Home Header ****/
 header {
@@ -335,7 +335,7 @@ header {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 2.5rem;
-    line-height: 5rem;
+    line-height: 2.5rem;
     letter-spacing: 0.1rem;
     text-align: left;
     margin: 0; }
@@ -420,8 +420,7 @@ nav {
   background-color: #111010;
   padding: 1px; }
   .spaceComBlogTouch .container {
-    margin-top: 50px;
-    margin-bottom: 40px; }
+    padding: 50px 0 40px 0; }
   .spaceComBlogTouch label {
     cursor: pointer;
     float: left;
@@ -453,14 +452,16 @@ nav {
   .iconWrap i {
     font-size: 1.3rem; }
 
-.iconContent .iconWrap {
-  display: none; }
+.iconContent {
+  clear: both; }
+  .iconContent h2 {
+    margin: 0;
+    padding: 20px 0; }
+  .iconContent .iconWrap {
+    display: none; }
 
 .iconContent > div {
   display: none; }
-
-.iconContent {
-  clear: both; }
 
 #newSpace:checked ~ .iconContent .newSpace,
 #community:checked ~ .iconContent .community,
@@ -473,24 +474,40 @@ nav {
 
 /**** New location Plan ahead ****/
 .newLocPlanAhead {
-  background-color: #220303; }
+  background-color: #220303;
+  padding: 50px 0 40px 0; }
   .newLocPlanAhead p {
     text-align: center; }
+
+.leftContainer .buttonWrap {
+  padding: 40px 0; }
+
+.rightContainer .buttonWrap {
+  padding-top: 40px; }
 
 /**** Events ****/
 .events {
   background-color: #111010;
   padding: 1px; }
 
+.events1 {
+  padding: 50px 0 40px 0; }
+  .events1 .buttonWrap {
+    padding-top: 40px; }
+
+.events2 {
+  padding: 50px 0 40px 0; }
+  .events2 .buttonWrap {
+    padding-top: 40px; }
+
 .events3 {
-  background-color: #220303; }
+  background-color: #220303;
+  padding: 50px 0 40px 0; }
   .events3 .flexParent {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; }
-  .events3 .imgContainer {
-    margin-bottom: 40px; }
   .events3 .imgContainer:nth-of-type(2) {
     margin-left: 20px; }
   .events3 picture {
@@ -519,29 +536,25 @@ footer {
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: center; }
-  #blog .recentPosts {
-    margin-top: 50px;
-    padding: 1px; }
-    #blog .recentPosts .container {
-      background-color: #220303; }
-    #blog .recentPosts li {
-      text-align: center; }
-    #blog .recentPosts li::before {
-      content: "\2022";
-      /* \2022 is the CSS Code/unicode for a bullet */
-      color: #ff8327;
-      font-weight: 900;
-      display: inline-block;
-      width: 20px;
-      margin-left: -20px; }
-    #blog .recentPosts ul {
-      margin-bottom: 40px; }
-    #blog .recentPosts .button {
-      margin-bottom: 20px; }
+  #blog .recentPosts .container {
+    background-color: #220303;
+    padding: 50px 20px 40px 20px; }
+  #blog .recentPosts li {
+    text-align: center; }
+  #blog .recentPosts li::before {
+    content: "\2022";
+    /* \2022 is the CSS Code/unicode for a bullet */
+    color: #ff8327;
+    font-weight: 900;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px; }
+  #blog .recentPosts .buttonWrap {
+    padding-top: 20px; }
   #blog .blogMain {
     background-color: #111010; }
   #blog .blogPosts {
-    margin-bottom: 20px; }
+    padding: 50px 0 40px 0; }
     #blog .blogPosts h3 {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
@@ -556,8 +569,9 @@ footer {
     #blog .blogPosts p:last-of-type {
       margin-bottom: 0; }
   #blog .comments {
-    background-color: #111010;
-    padding: 1px; }
+    background-color: #111010; }
+    #blog .comments .commentWrap {
+      padding: 50px 0 40px 0; }
     #blog .comments .contentWrap {
       margin-bottom: 30px; }
     #blog .comments .imgContainer {
@@ -571,6 +585,8 @@ footer {
       text-align: center;
       color: #ff8327;
       margin-bottom: 20px; }
+  #blog form {
+    padding: 50px 0 40px 0; }
   #blog input#name,
   #blog input#email,
   #blog textarea#comment {
@@ -658,7 +674,7 @@ footer {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 1.9rem;
-    line-height: 1.45rem;
+    line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
     color: #ffffff;
@@ -668,7 +684,7 @@ footer {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 1.9rem;
-    line-height: 1.45rem;
+    line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
     color: #ffffff;
@@ -678,7 +694,7 @@ footer {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 1.9rem;
-    line-height: 1.45rem;
+    line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
     color: #ffffff;
@@ -688,7 +704,7 @@ footer {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
     font-size: 1.9rem;
-    line-height: 1.45rem;
+    line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
     color: #ffffff;
@@ -724,7 +740,8 @@ footer {
   /**** Events ****/
   .events2 .imgContainer {
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-    box-shadow: -15px 15px 0px 4px #ff8327; }
+    box-shadow: -15px 15px 0px 4px #ff8327;
+    width: 60%; }
   .events2 h2 {
     margin: 40px 0 20px 0; } }
 
@@ -739,9 +756,20 @@ footer {
     height: 65px; }
     .spaceComBlogTouch .iconWrap i {
       font-size: 2rem; }
+  /**** Events ****/
+  .events2 .imgContainer {
+    width: 55%; }
   /**** BLOG ****/
   #blog {
+    /**** Header ****/
     /**** Blog main ****/ }
+    #blog header h1 {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 6rem;
+      line-height: 2.35rem;
+      letter-spacing: 0.05rem;
+      text-align: left; }
     #blog .blogPosts .imgContainer {
       -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
       box-shadow: -15px 15px 0px 4px #ff8327; }
@@ -776,13 +804,75 @@ footer {
     line-height: 5.5rem;
     letter-spacing: 0.1rem;
     text-align: left; }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: center; }
+    header nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: static;
+      margin-top: 50px; }
+      header nav ul li {
+        margin: 0 30px; }
+      header nav ul .logo {
+        display: block; }
+        header nav ul .logo h2 {
+          line-height: 0px; }
+      header nav ul a {
+        font-family: 'Chathura', sans-serif;
+        color: #ffffff;
+        font-size: 1.9rem;
+        line-height: 1.45rem;
+        letter-spacing: 0.1rem;
+        text-align: right; }
+        header nav ul a:hover {
+          color: #ff8327; }
+  header .hamburger {
+    display: none; }
   /**** New location plan ahead starts  ****/
+  .newLocPlanAhead h2 {
+    padding-top: 40px; }
   .leftImg {
     -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
     box-shadow: 15px 15px 0px 4px #ff8327; }
   .rightImg {
     -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
     box-shadow: -15px 15px 0px 4px #ff8327; }
+  /**** Events ****/
+  .events2 .container {
+    width: 90%; }
+  .events2 .imgContainer {
+    width: calc(30% - 20px);
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px; }
+  .events2 .contentWrap {
+    width: calc(70% - 40px);
+    margin-left: 40px;
+    float: left; }
+    .events2 .contentWrap h2,
+    .events2 .contentWrap p,
+    .events2 .contentWrap .buttonWrap {
+      text-align: left; }
+    .events2 .contentWrap h2 {
+      margin: 0; }
   /**** BLOG ****/
   #blog {
     /**** Header ****/ }
@@ -792,9 +882,18 @@ footer {
       font-size: 6rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
-      text-align: center; }
-    #blog .container {
+      text-align: left; }
+    #blog header .flexParent {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+    #blog header .container {
       width: 70%; }
+    #blog .recentPosts .imgContainer {
+      width: 60%; }
   /**** CONTACT ****/
   #contact {
     /**** Header ****/ }
@@ -804,7 +903,14 @@ footer {
       font-size: 6rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
-      text-align: center; }
+      text-align: left; }
+    #contact header .flexParent {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
     #contact .contactDetails ul {
       width: 50%; } }
 
@@ -821,8 +927,6 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; }
-  .events3 .imgContainer {
-    margin-bottom: 40px; }
   .events3 .imgContainer:nth-of-type(1) {
     margin: 0 0 40px 0; }
   .events3 .imgContainer:nth-of-type(2) {
@@ -939,53 +1043,12 @@ footer {
   .container {
     width: 90%; }
   .button {
-    margin-top: 20px;
     padding: 10px 30px; }
   /**** Header ****/
   header {
     min-height: 100vh; }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    text-align: center; }
-    nav ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      position: static;
-      margin-top: 30px; }
-      nav ul li {
-        margin: 0 40px; }
-      nav ul .logo {
-        display: block; }
-        nav ul .logo h2 {
-          line-height: 0px; }
-      nav ul a {
-        font-family: 'Chathura', sans-serif;
-        color: #ffffff;
-        font-size: 1.9rem;
-        line-height: 1.45rem;
-        letter-spacing: 0.1rem;
-        text-align: right; }
-        nav ul a:hover {
-          color: #ff8327; }
-  .hamburger {
-    display: none; }
+    header nav ul li {
+      margin: 0 40px; }
   .logoWrap {
     margin-top: 350px;
     z-index: 99; }
@@ -1058,17 +1121,15 @@ footer {
     .rightContainer .container .buttonWrap {
       text-align: left; }
   /**** Events ****/
-  .events1 {
-    margin: 150px 0 100px 0; }
-    .events1 .flexParent {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse; }
-    .events1 .container {
-      margin-bottom: 80px; }
+  .events1 .flexParent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .events1 .container {
+    margin-bottom: 80px; }
   .events2 {
-    margin: 0 auto 80px; }
+    margin: 0 auto; }
     .events2 .container {
       width: 90%; }
     .events2 .imgContainer {
@@ -1086,8 +1147,6 @@ footer {
         text-align: left; }
       .events2 .contentWrap h2 {
         margin: 0; }
-  .events3 {
-    margin: 40px 0; }
   /**** BLOG ****/
   #blog {
     /**** Global styles ****/
@@ -1098,15 +1157,8 @@ footer {
     /**** Comments ****/ }
     #blog .container {
       width: 90%; }
-    #blog header .flexParent {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; }
-    #blog h1 {
-      text-align: left; }
+    #blog .logoWrap {
+      margin-top: 200px; }
     #blog main .flexParent {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
