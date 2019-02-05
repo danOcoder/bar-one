@@ -109,11 +109,16 @@ nav input {
   flex-direction: column;
 }
 
+
 input#post,
 input#submit {
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
   margin: 0 auto;
   display: block;
+
+  &hover {
+    color: $dustyOrange;
+  }
 }
 
 input#name,
@@ -137,10 +142,15 @@ textarea#message {
   min-height: 10rem;
 }
 
-input#name:focus,
-input#email:focus,
-textarea#comment:focus,
-textarea#message:focus {
+textarea#comment::placeholder,
+textarea#message::placeholder {
+  color: $OffWhite;
+}
+
+input[type=text]#name,
+input[type=email]#email,
+input[type=textarea]#comment,
+input[type=textarea]#message {
   color: $OffWhite;
   @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
 }
@@ -388,7 +398,7 @@ nav {
 /**** Footer ****/
 
 footer {
-  background-color: $darkRed;
+  background-color: $black;
   margin: 0;
   padding: 10px 0;
 }
@@ -544,8 +554,8 @@ footer {
 
   form {
     background-color: $darkRed;
-    margin: 40px 0 20px 0;
-    padding: 10px;
+    padding: 50px 20px 40px 20px;
+
   }
 
   input#name,
@@ -575,6 +585,7 @@ footer {
 
   .contactDetails {
     background-color: $black;
+    padding: 50px 20px 40px 20px;
 
     ul {
       display: flex;
@@ -594,6 +605,10 @@ footer {
     a {
       display: block;
       text-align: center;
+
+      &:hover {
+        color: $dustyOrange;
+      }
     }
   }
 

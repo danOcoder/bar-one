@@ -13,29 +13,31 @@
 
 <body id="contact">
   <!-- HEADRE STARTS -->
-  <header class="wrapper">
-    <!-- Nav starts -->
-    <nav>
-      <input id="hamburger" type="checkbox" name="hamburger">
-      <label for="hamburger">
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
-      </label>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li class="logo">
-          <h2>Bar One</h2>
-        </li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Nav ends -->
-    <div class="container">
-      <div class="flexParent">
-        <!-- Logo -->
-        <div class="logoWrap">
-          <h1>Get In Touch</h1>
+  <header>
+    <div class="wrapper">
+      <!-- Nav starts -->
+      <nav>
+        <input id="hamburgerIcon" type="checkbox" name="hamburger">
+        <label for="hamburgerIcon">
+          <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="logo">
+            <h2>Bar One</h2>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Nav ends -->
+      <div class="container">
+        <div class="flexParent">
+          <!-- Logo -->
+          <div class="logoWrap">
+            <h1>Get In Touch</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -43,42 +45,48 @@
   </header>
   <!-- HEADER ENDS -->
   <!-- MAIN STARTS -->
-  <main class="wrapper">
-    <div class="container">
-      <div class="flexParent">
-        <form action="#" class="contact">
-          <div class="contactForm clearfix">
-            <div class="name">
-              <label for="name">Name</label>
-              <input id="name" type="text">
+  <main>
+    <div class="wrapper">
+      <div class="container">
+        <div class="flexParent">
+          <form action="#" class="contact">
+            <div class="contactForm clearfix">
+              <div class="name">
+                <label for="name">Name</label>
+                <input id="name" type="text">
+              </div>
+              <div class="email">
+                <label for="email">Email Address</label>
+                <input id="email" type="email">
+              </div>
             </div>
-            <div class="email">
-              <label for="email">Email Address</label>
-              <input id="email" type="email">
-            </div>
+            <label for="message"></label>
+            <textarea class="text" name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
+            <label for="submit"></label>
+            <input class="button" id="submit" type="submit" value="Submit">
+          </form>
+          <div class="contactDetails">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+            <a class="email" href="#">info@email.com</a>
+            <a class="phone" href="#">123-456-7890</a>
+            <a class="address" href="#">123 Queen St West Unit 10 <br>Toronto, Ontario <br>M6V205</a>
           </div>
-          <label for="message"></label>
-          <textarea name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
-          <label for="submit"></label>
-          <input class="button" id="submit" type="submit" value="Submit">
-        </form>
-        <div class="contactDetails">
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-          </ul>
-          <a class="email" href="#">info@email.com</a>
-          <a class="phone" href="#">123-456-7890</a>
-          <a class="address" href="#">123 Queen St West Unit 10 <br>Toronto, Ontario <br>M6V205</a>
         </div>
       </div>
     </div>
   </main>
   <!-- FOOTER STARTS -->
-  <footer class="wrapper">
-    <p>Copyright © 2019 HackerYou</p>
+  <footer>
+    <div class="wrapper">
+      <div class="container">
+        <p>Copyright © 2019 HackerYou</p>
+      </div>
+    </div>
   </footer>
   <!-- FOOTER ENDS -->
 

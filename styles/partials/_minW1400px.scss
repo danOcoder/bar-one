@@ -22,6 +22,10 @@
         }
       }
     }
+
+    .wrapper {
+      position: relative;
+    }
   }
 
   .logoWrap {
@@ -141,6 +145,7 @@
   /**** Events ****/
 
   .events1 {
+    padding-top: 80px;
 
     .flexParent {
       flex-direction: column-reverse;
@@ -337,11 +342,15 @@
       text-align: left;
     }
 
+    .logoWrap {
+      margin-top: 220px;
+    }
+
+
     /**** form ****/
 
     form {
-
-      bottom: 150px;
+      bottom: 170px;
     }
   }
 

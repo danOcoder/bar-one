@@ -281,6 +281,9 @@ input#submit {
   text-align: center;
   margin: 0 auto;
   display: block; }
+  input#posthover,
+  input#submithover {
+    color: #ff8327; }
 
 input#name,
 input#email,
@@ -300,10 +303,26 @@ textarea#comment,
 textarea#message {
   min-height: 10rem; }
 
-input#name:focus,
-input#email:focus,
-textarea#comment:focus,
-textarea#message:focus {
+textarea#comment::-webkit-input-placeholder,
+textarea#message::-webkit-input-placeholder {
+  color: #ffffff; }
+
+textarea#comment:-ms-input-placeholder,
+textarea#message:-ms-input-placeholder {
+  color: #ffffff; }
+
+textarea#comment::-ms-input-placeholder,
+textarea#message::-ms-input-placeholder {
+  color: #ffffff; }
+
+textarea#comment::placeholder,
+textarea#message::placeholder {
+  color: #ffffff; }
+
+input[type=text]#name,
+input[type=email]#email,
+input[type=textarea]#comment,
+input[type=textarea]#message {
   color: #ffffff;
   font-family: 'Chathura', sans-serif;
   color: #ffffff;
@@ -515,7 +534,7 @@ nav {
 
 /**** Footer ****/
 footer {
-  background-color: #220303;
+  background-color: grey;
   margin: 0;
   padding: 10px 0; }
 
@@ -658,8 +677,7 @@ footer {
     padding: 1px; }
   #contact form {
     background-color: #220303;
-    margin: 40px 0 20px 0;
-    padding: 10px; }
+    padding: 50px 20px 40px 20px; }
   #contact input#name,
   #contact input#email,
   #contact textarea#message {
@@ -710,7 +728,8 @@ footer {
     color: #ffffff;
     padding-left: 20px; }
   #contact .contactDetails {
-    background-color: #111010; }
+    background-color: #111010;
+    padding: 50px 20px 40px 20px; }
     #contact .contactDetails ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -730,6 +749,8 @@ footer {
     #contact .contactDetails a {
       display: block;
       text-align: center; }
+      #contact .contactDetails a:hover {
+        color: #ff8327; }
   #contact .email,
   #contact .address {
     margin-bottom: 20px; }
@@ -1031,7 +1052,7 @@ footer {
       -ms-flex-direction: column;
       flex-direction: column; }
       #contact .contactDetails ul {
-        width: 50%;
+        width: 70%;
         margin: 0 0 15px 0; }
       #contact .contactDetails li {
         text-align: left; }
@@ -1049,6 +1070,8 @@ footer {
     min-height: 100vh; }
     header nav ul li {
       margin: 0 40px; }
+    header .wrapper {
+      position: relative; }
   .logoWrap {
     margin-top: 350px;
     z-index: 99; }
@@ -1121,13 +1144,15 @@ footer {
     .rightContainer .container .buttonWrap {
       text-align: left; }
   /**** Events ****/
-  .events1 .flexParent {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse; }
-  .events1 .container {
-    margin-bottom: 80px; }
+  .events1 {
+    padding-top: 80px; }
+    .events1 .flexParent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+    .events1 .container {
+      margin-bottom: 80px; }
   .events2 {
     margin: 0 auto; }
     .events2 .container {
@@ -1246,5 +1271,7 @@ footer {
         align-items: flex-start; }
     #contact h1 {
       text-align: left; }
+    #contact .logoWrap {
+      margin-top: 220px; }
     #contact form {
-      bottom: 150px; } }
+      bottom: 170px; } }
