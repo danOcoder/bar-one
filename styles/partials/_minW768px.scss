@@ -53,6 +53,12 @@
         @include bodyFont (6rem, 2.35rem, 0.05rem, center);
       }
     }
+
+    .contactDetails {
+      ul {
+        width: 50%;
+      }
+    }
   }
 
 

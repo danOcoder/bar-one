@@ -103,6 +103,8 @@
   /**** CONACT ****/
 
   #contact {
+
+    /**** Main ****/
     main {
       .container {
         width: 90%;
@@ -116,11 +118,14 @@
       }
     }
 
+    /**** Form ****/
+
     form {
       width: calc(70% - 20px);
       margin: 0 0 20px 0;
+      padding: 30px;
       position: absolute;
-      bottom: 50px;
+      bottom: 80px;
       right: 0;
     }
 
@@ -147,21 +152,31 @@
       margin-left: 10px;
     }
 
+    input#submit {
+      width: 100%;
+    }
+
+    .button {
+      padding: 10px 30px;
+      margin: 30px 0 10px 0;
+    }
+
+    /**** Contact details ****/
+
     .contactDetails {
       width: calc(30% - 20px);
-      margin: 200px 20px 0 0;
+      margin: 150px 20px 50px 0;
+      padding-bottom: 60px;
       display: flex;
       flex-direction: column;
 
-      .container {
-        width: 100%;
-        max-width: 250px;
-        margin: 0;
-        align-self: flex-end;
+      ul {
+        width: 50%;
+        margin: 0 0 15px 0;
       }
 
-      ul {
-        width: 100%;
+      li {
+        text-align: left;
       }
 
       a {

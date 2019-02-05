@@ -249,18 +249,22 @@ img {
   padding: 23px 18px;
   display: inline-block;
   text-transform: uppercase; }
-
-.button:hover {
-  background-color: #111010;
-  border: 1px solid #ffffff; }
+  .button:hover {
+    color: #ff8327;
+    background-color: #111010;
+    border: 1px solid #ff8327; }
 
 .buttonWrap {
   text-align: center; }
 
 .spaceComBlogTouch input,
 nav input {
-  opacity: 0;
-  position: absolute; }
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
 
 .commentForm,
 .contactForm {
@@ -362,31 +366,33 @@ nav {
   align-items: flex-end;
   text-align: right;
   margin: 20px 20px 0 0; }
+  nav label {
+    padding-bottom: 20px; }
   nav ul {
     position: absolute;
-    top: 70px;
-    right: -80px;
-    -webkit-transition: right 1s;
-    -o-transition: right 1s;
-    transition: right 1s; }
+    top: 80px;
+    right: -95px;
+    -webkit-transition: right 600ms;
+    -o-transition: right 600ms;
+    transition: right 600ms; }
+    nav ul li {
+      margin-bottom: 25px; }
     nav ul .logo {
       display: none; }
     nav ul a {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
-      font-size: 1.9rem;
+      font-size: 2.5rem;
       line-height: 1.45rem;
       letter-spacing: 0.1rem;
       text-align: right; }
       nav ul a:hover {
         color: #ff8327; }
-    nav ul li {
-      margin-bottom: 10px; }
 
-#hamburger:checked ~ ul {
+#hamburgerIcon:checked ~ ul {
   right: 20px; }
 
-#hamburger:checked + label i {
+#hamburgerIcon:checked + label i {
   color: #ff8327; }
 
 .hamburger {
@@ -399,7 +405,7 @@ nav {
     display: block; }
 
 .logoWrap {
-  margin-top: 200px; }
+  margin-top: 260px; }
 
 .headerOverlay {
   display: none; }
@@ -618,7 +624,7 @@ footer {
   /**** contact details ****/ }
   #contact header {
     background: url(../assets/contactHeader2.jpg);
-    min-height: 600px; }
+    min-height: 500px; }
     #contact header h1 {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
@@ -627,16 +633,16 @@ footer {
       letter-spacing: 0.05rem;
       text-align: center; }
   #contact main {
-    background-color: plum;
+    background-color: #111010;
     padding: 1px; }
   #contact form {
-    background-color: purple;
+    background-color: #220303;
     margin: 40px 0 20px 0;
     padding: 10px; }
   #contact input#name,
   #contact input#email,
   #contact textarea#message {
-    background-color: purple; }
+    background-color: #220303; }
   #contact input#name,
   #contact input#email {
     border-bottom: 2px solid #ffffff; }
@@ -683,7 +689,7 @@ footer {
     color: #ffffff;
     padding-left: 20px; }
   #contact .contactDetails {
-    background-color: lime; }
+    background-color: #111010; }
     #contact .contactDetails ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -703,12 +709,11 @@ footer {
     #contact .contactDetails a {
       display: block;
       text-align: center; }
-  #contact .email {
+  #contact .email,
+  #contact .address {
     margin-bottom: 20px; }
   #contact .phone {
     margin-bottom: 10px; }
-  #contact .address {
-    margin-bottom: 20px; }
 
 @media (min-width: 320px) {
   /**** Events ****/
@@ -740,16 +745,14 @@ footer {
       box-shadow: 15px 15px 0px 4px #ff8327;
       width: 70%; }
   /**** CONTACT ****/
-  #contact .contactDetails .container {
-    width: 70%; }
   #contact .contactDetails ul {
-    width: 80%;
+    width: 60%;
     margin: 0 auto 15px; }
   #contact form {
     margin: 40px auto 40px;
     width: 85%;
-    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-    box-shadow: -15px 15px 0px 4px #ff8327; } }
+    -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
+    box-shadow: 15px 15px 0px 4px #ff8327; } }
 
 @media (min-width: 768px) {
   /**** Header ****/
@@ -795,7 +798,9 @@ footer {
       font-size: 6rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
-      text-align: center; } }
+      text-align: center; }
+    #contact .contactDetails ul {
+      width: 50%; } }
 
 @media (min-width: 992px) {
   /**** Global styles ****/
@@ -858,62 +863,70 @@ footer {
       #blog .comments .contentWrap h3 {
         margin-bottom: 20px; }
   /**** CONACT ****/
-  #contact main .container {
-    width: 90%; }
-  #contact main .flexParent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: relative; }
-  #contact form {
-    width: calc(70% - 20px);
-    margin: 0 0 20px 0;
-    position: absolute;
-    bottom: 50px;
-    right: 0; }
-  #contact .contactForm {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row; }
-  #contact input,
-  #contact label {
-    display: block; }
-  #contact .name,
-  #contact .email {
-    width: calc(50% - 10px);
-    float: left; }
-  #contact .name {
-    margin-right: 10px; }
-  #contact .email {
-    margin-left: 10px; }
-  #contact .contactDetails {
-    width: calc(30% - 20px);
-    margin: 200px 20px 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    #contact .contactDetails .container {
-      width: 100%;
-      max-width: 250px;
-      margin: 0;
-      -ms-flex-item-align: end;
-      align-self: flex-end; }
-    #contact .contactDetails ul {
+  #contact {
+    /**** Main ****/
+    /**** Form ****/
+    /**** Contact details ****/ }
+    #contact main .container {
+      width: 90%; }
+    #contact main .flexParent {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      position: relative; }
+    #contact form {
+      width: calc(70% - 20px);
+      margin: 0 0 20px 0;
+      padding: 30px;
+      position: absolute;
+      bottom: 80px;
+      right: 0; }
+    #contact .contactForm {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    #contact input,
+    #contact label {
+      display: block; }
+    #contact .name,
+    #contact .email {
+      width: calc(50% - 10px);
+      float: left; }
+    #contact .name {
+      margin-right: 10px; }
+    #contact .email {
+      margin-left: 10px; }
+    #contact input#submit {
       width: 100%; }
-    #contact .contactDetails a {
-      text-align: left; } }
+    #contact .button {
+      padding: 10px 30px;
+      margin: 30px 0 10px 0; }
+    #contact .contactDetails {
+      width: calc(30% - 20px);
+      margin: 150px 20px 50px 0;
+      padding-bottom: 60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #contact .contactDetails ul {
+        width: 50%;
+        margin: 0 0 15px 0; }
+      #contact .contactDetails li {
+        text-align: left; }
+      #contact .contactDetails a {
+        text-align: left; } }
 
 @media (min-width: 1400px) {
   /**** Global styles ****/
@@ -1159,4 +1172,21 @@ footer {
     #blog .comments .contentWrap h3 {
       margin-bottom: 10px; }
     #blog input#post {
-      width: 100%; } }
+      width: 100%; }
+  /**** CONTACT ****/
+  #contact {
+    /**** Header ****/
+    /**** form ****/ }
+    #contact header {
+      min-height: 600px; }
+      #contact header .flexParent {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+    #contact h1 {
+      text-align: left; }
+    #contact form {
+      bottom: 150px; } }

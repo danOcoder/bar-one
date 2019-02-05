@@ -84,12 +84,15 @@ img {
   padding: 23px 18px;
   display: inline-block;
   text-transform: uppercase;
+
+  &:hover {
+    color: $dustyOrange;
+    background-color: $black;
+    border: 1px solid $dustyOrange;
+  }
 }
 
-.button:hover {
-  background-color: $black;
-  border: 1px solid $OffWhite;
-}
+
 
 .buttonWrap {
   text-align: center;
@@ -97,8 +100,12 @@ img {
 
 .spaceComBlogTouch input,
 nav input {
-  opacity: 0;
   position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .commentForm,
@@ -181,35 +188,39 @@ nav {
   text-align: right;
   margin: 20px 20px 0 0;
 
+  label {
+    padding-bottom: 20px;
+  }
+
   ul {
     position: absolute;
-    top: 70px;
-    right: -80px;
-    transition: right 1s;
+    top: 80px;
+    right: -95px;
+    transition: right 600ms;
+
+    li {
+      margin-bottom: 25px;
+    }
 
     .logo {
       display: none;
     }
 
     a {
-      @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
+      @include bodyFont (2.5rem, 1.45rem, 0.1rem, right);
 
       &:hover {
         color: $dustyOrange;
       }
     }
-
-    li {
-      margin-bottom: 10px;
-    }
   }
 }
 
-#hamburger:checked~ul {
+#hamburgerIcon:checked~ul {
   right: 20px;
 }
 
-#hamburger:checked+label i {
+#hamburgerIcon:checked+label i {
   color: $dustyOrange;
 }
 
@@ -227,7 +238,7 @@ nav {
 }
 
 .logoWrap {
-  margin-top: 200px;
+  margin-top: 260px;
 }
 
 .headerOverlay {
@@ -485,20 +496,20 @@ footer {
       @include bodyFont (5rem, 2.35rem, 0.05rem, center);
     }
 
-    min-height: 600px;
+    min-height: 500px;
   }
 
   /**** Main ****/
 
   main {
-    background-color: plum;
+    background-color: $black;
     padding: 1px;
   }
 
   /**** Form ****/
 
   form {
-    background-color: purple;
+    background-color: $darkRed;
     margin: 40px 0 20px 0;
     padding: 10px;
   }
@@ -506,7 +517,7 @@ footer {
   input#name,
   input#email,
   textarea#message {
-    background-color: purple;
+    background-color: $darkRed;
   }
 
   input#name,
@@ -529,7 +540,7 @@ footer {
   /**** contact details ****/
 
   .contactDetails {
-    background-color: lime;
+    background-color: $black;
 
     ul {
       display: flex;
@@ -552,16 +563,13 @@ footer {
     }
   }
 
-  .email {
+  .email,
+  .address {
     margin-bottom: 20px;
   }
 
   .phone {
     margin-bottom: 10px;
-  }
-
-  .address {
-    margin-bottom: 20px;
   }
 
 }
