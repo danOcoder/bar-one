@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Dan O'Connor Project Two</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" href="assets/favicon.PNG" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
@@ -13,13 +14,15 @@
 
 <body>
   <!-- HEADRE STARTS -->
+  <!-- Skip Link -->
+  <a href="#mainContent" class="skipLink">Skip to main content</a>
   <header>
     <div class="wrapper">
       <div class="container">
         <!-- Nav starts -->
         <nav>
           <input id="hamburgerIcon" type="checkbox" name="hamburger">
-          <label for="hamburgerIcon">
+          <label for="hamburgerIcon" role="button">
             <div class="hamburger"><i class="fas fa-bars"></i></div>
           </label>
           <ul>
@@ -51,26 +54,26 @@
   </header>
   <!-- HEADER ENDS -->
   <!-- MAIN STARTS -->
-  <main id="about">
+  <main id="about mainContent">
     <!-- New space community blog get in touch starts -->
     <section class="spaceComBlogTouch clearfix">
       <div class="wrapper">
         <!-- Mobile setup starts -->
         <div class="iconMenu container">
           <input id="newSpace" type="radio" name="icon" checked>
-          <label for="newSpace">
+          <label for="newSpace" role="button">
             <div class="iconWrap"><i class="fas fa-home"></i></div>
           </label>
           <input id="community" type="radio" name="icon">
-          <label for="community">
+          <label for="community" role="button">
             <div class="iconWrap"><i class="fas fa-users"></i></div>
           </label>
           <input id="blog" type="radio" name="icon">
-          <label for="blog">
+          <label for="blog" role="button">
             <div class="iconWrap"><i class="fas fa-file"></i></div>
           </label>
           <input id="getInTouch" type="radio" name="icon">
-          <label for="getInTouch">
+          <label for="getInTouch" role="button">
             <div class="iconWrap"><i class="fas fa-phone"></i></div>
           </label>
           <div class="iconContent">

@@ -185,9 +185,10 @@ input {
 /**** Mixins ****/
 /**** Global Styles ****/
 html {
-  font-size: 125%;
+  font-size: 93.7%;
   /*
     62.5% = units of 10px
+    93.7% = units of 15px
     125% = units of 20px
      */ }
 
@@ -336,6 +337,17 @@ input[type=textarea]#message {
 textarea#message {
   padding-bottom: 30px; }
 
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black; }
+
+.skipLink:focus {
+  left: 0; }
+
 /**** Home Header ****/
 header {
   min-height: 600px;
@@ -345,15 +357,16 @@ header {
   padding: 1px; }
   header h1 {
     font-family: 'Tulpen One', cursive;
-    font-size: 6.5rem;
+    font-size: 8rem;
     letter-spacing: 0.05rem;
     color: #ff8327;
     text-align: left;
-    line-height: 3.5rem; }
+    line-height: 3.5rem;
+    padding-bottom: 10px; }
   header h2 {
     font-family: 'Chathura', sans-serif;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 4rem;
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -378,7 +391,7 @@ nav {
   -ms-flex-pack: end;
   justify-content: flex-end;
   text-align: right;
-  margin: 20px 20px 0 0; }
+  margin-top: 20px; }
   nav label {
     padding-bottom: 20px; }
   nav ul {
@@ -414,7 +427,7 @@ nav {
         color: #ff8327; }
 
 #hamburgerIcon:checked ~ ul {
-  right: 20px; }
+  right: 18px; }
 
 #hamburgerIcon:checked + label i {
   color: #ff8327; }
@@ -423,13 +436,13 @@ nav {
   margin-bottom: 20px; }
   .hamburger i {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     float: right;
     cursor: pointer;
     display: block; }
 
 .logoWrap {
-  margin-top: 260px; }
+  margin-top: 230px; }
 
 .headerOverlay {
   display: none; }
@@ -552,7 +565,7 @@ footer {
     #blog header h1 {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
-      font-size: 5rem;
+      font-size: 7rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: center; }
@@ -560,7 +573,8 @@ footer {
     background-color: #220303;
     padding: 50px 20px 40px 20px; }
   #blog .recentPosts li {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 15px; }
   #blog .recentPosts li::before {
     content: "\2022";
     /* \2022 is the CSS Code/unicode for a bullet */
@@ -771,6 +785,25 @@ footer {
   /**** Global styles ****/
   .container {
     width: 80%; }
+  /**** Header ****/
+  header h1 {
+    font-family: 'Tulpen One', cursive;
+    font-size: 10rem;
+    letter-spacing: 0.05rem;
+    color: #ff8327;
+    text-align: left;
+    line-height: 3.5rem;
+    padding-bottom: 25px; }
+  header h2 {
+    font-family: 'Chathura', sans-serif;
+    color: #ffffff;
+    font-size: 6rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    margin: 0; }
+  #hamburgerIcon:checked ~ ul {
+    right: 50px; }
   /**** New space community blog get in touch ****/
   .spaceComBlogTouch .iconWrap {
     padding: 30px;
@@ -788,7 +821,7 @@ footer {
     #blog header h1 {
       font-family: 'Chathura', sans-serif;
       color: #ffffff;
-      font-size: 6rem;
+      font-size: 10rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: left; }
@@ -810,38 +843,33 @@ footer {
     box-shadow: 15px 15px 0px 4px #ff8327; } }
 
 @media (min-width: 768px) {
+  /**** Global Styles ****/
+  html {
+    font-size: 125%;
+    /*
+      62.5% = units of 10px
+      93.7% = units of 15px
+      125% = units of 20px
+       */ }
   /**** Header ****/
-  header h1 {
-    font-family: 'Tulpen One', cursive;
-    font-size: 13.05rem;
-    letter-spacing: 0.7rem;
-    color: #ff8327;
-    text-align: left;
-    line-height: 3.5rem;
-    padding-bottom: 20px; }
-  header h2 {
-    font-family: 'Chathura', sans-serif;
-    color: #ffffff;
-    font-size: 4.15rem;
-    line-height: 5.5rem;
-    letter-spacing: 0.1rem;
-    text-align: left; }
-  header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    text-align: center; }
-    header nav ul {
+  header {
+    min-height: 700px; }
+    header h1 {
+      font-family: 'Tulpen One', cursive;
+      font-size: 13.05rem;
+      letter-spacing: 0.7rem;
+      color: #ff8327;
+      text-align: left;
+      line-height: 3.5rem;
+      padding-bottom: 20px; }
+    header h2 {
+      font-family: 'Chathura', sans-serif;
+      color: #ffffff;
+      font-size: 4.15rem;
+      line-height: 5.5rem;
+      letter-spacing: 0.1rem;
+      text-align: left; }
+    header nav {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -849,25 +877,40 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      position: static;
-      margin-top: 50px; }
-      header nav ul li {
-        margin: 0 30px; }
-      header nav ul .logo {
-        display: block; }
-        header nav ul .logo h2 {
-          line-height: 0px; }
-      header nav ul a {
-        font-family: 'Chathura', sans-serif;
-        color: #ffffff;
-        font-size: 1.9rem;
-        line-height: 1.45rem;
-        letter-spacing: 0.1rem;
-        text-align: right; }
-        header nav ul a:hover {
-          color: #ff8327; }
-  header .hamburger {
-    display: none; }
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      text-align: center; }
+      header nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        position: static;
+        margin-top: 50px; }
+        header nav ul li {
+          margin: 0 25px; }
+        header nav ul .logo {
+          display: block; }
+          header nav ul .logo h2 {
+            line-height: 0px; }
+        header nav ul a {
+          font-family: 'Chathura', sans-serif;
+          color: #ffffff;
+          font-size: 1.9rem;
+          line-height: 1.45rem;
+          letter-spacing: 0.1rem;
+          text-align: right; }
+          header nav ul a:hover {
+            color: #ff8327; }
+    header .hamburger {
+      display: none; }
   /**** New location plan ahead starts  ****/
   .newLocPlanAhead h2 {
     padding-top: 40px; }
@@ -913,7 +956,7 @@ footer {
       -ms-flex-align: start;
       align-items: flex-start; }
     #blog header .container {
-      width: 70%; }
+      width: 90%; }
     #blog .recentPosts .imgContainer {
       width: 60%; }
   /**** CONTACT ****/

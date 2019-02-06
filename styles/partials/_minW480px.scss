@@ -5,6 +5,26 @@
     width: 80%;
   }
 
+  /**** Header ****/
+  header {
+
+    h1 {
+      @include headingFont(10rem, 0.05rem);
+      line-height: 3.5rem;
+      padding-bottom: 25px;
+    }
+
+
+    h2 {
+      @include bodyFont (6rem, 2.5rem, 0.1rem, left);
+      margin: 0;
+    }
+  }
+
+  #hamburgerIcon:checked~ul {
+    right: 50px;
+  }
+
   /**** New space community blog get in touch ****/
 
   .spaceComBlogTouch {
@@ -36,7 +56,7 @@
 
     header {
       h1 {
-        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
+        @include bodyFont (10rem, 2.35rem, 0.05rem, left);
       }
     }
 

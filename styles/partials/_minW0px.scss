@@ -28,9 +28,10 @@ $black: #111010;
 /**** Global Styles ****/
 
 html {
-  font-size: 125%;
+  font-size: 93.7%;
   /*
     62.5% = units of 10px
+    93.7% = units of 15px
     125% = units of 20px
      */
 }
@@ -161,6 +162,19 @@ textarea#message {
   padding-bottom: 30px;
 }
 
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
 /**** Home Header ****/
 
 header {
@@ -171,13 +185,14 @@ header {
   padding: 1px;
 
   h1 {
-    @include headingFont(6.5rem, 0.05rem);
+    @include headingFont(8rem, 0.05rem);
     line-height: 3.5rem;
+    padding-bottom: 10px;
   }
 
 
   h2 {
-    @include bodyFont (2.5rem, 2.5rem, 0.1rem, left);
+    @include bodyFont (4rem, 2.5rem, 0.1rem, left);
     margin: 0;
   }
 
@@ -192,7 +207,7 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   text-align: right;
-  margin: 20px 20px 0 0;
+  margin-top: 20px;
 
   label {
     padding-bottom: 20px;
@@ -231,7 +246,7 @@ nav {
 }
 
 #hamburgerIcon:checked~ul {
-  right: 20px;
+  right: 18px;
 }
 
 #hamburgerIcon:checked+label i {
@@ -243,7 +258,7 @@ nav {
 
   i {
     color: $OffWhite;
-    font-size: 1.5rem;
+    font-size: 2rem;
     float: right;
     cursor: pointer;
     display: block;
@@ -252,7 +267,7 @@ nav {
 }
 
 .logoWrap {
-  margin-top: 260px;
+  margin-top: 230px;
 }
 
 .headerOverlay {
@@ -284,8 +299,8 @@ nav {
   label:nth-last-of-type(4) {
     margin-left: 0;
   }
-
 }
+
 
 .iconWrap {
   display: flex;
@@ -417,7 +432,7 @@ footer {
     background: url(../assets/blogHeader1.jpg);
 
     h1 {
-      @include bodyFont (5rem, 2.35rem, 0.05rem, center);
+      @include bodyFont (7rem, 2.35rem, 0.05rem, center);
     }
 
     min-height: 600px;
@@ -434,6 +449,7 @@ footer {
 
     li {
       text-align: center;
+      padding-bottom: 15px;
     }
 
     li::before {

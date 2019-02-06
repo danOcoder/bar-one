@@ -1,8 +1,21 @@
 @media (min-width: 768px) {
 
+  /**** Global Styles ****/
+
+  html {
+    font-size: 125%;
+    /*
+      62.5% = units of 10px
+      93.7% = units of 15px
+      125% = units of 20px
+       */
+  }
+
   /**** Header ****/
 
   header {
+    min-height: 700px;
+
     h1 {
       @include headingFont(13.05rem, 0.7rem);
       line-height: 3.5rem;
@@ -27,7 +40,7 @@
         margin-top: 50px;
 
         li {
-          margin: 0 30px;
+          margin: 0 25px;
         }
 
         .logo {
@@ -121,7 +134,7 @@
       }
 
       .container {
-        width: 70%
+        width: 90%
       }
     }
 

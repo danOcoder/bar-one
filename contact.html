@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Contact - Dan O'Connor Project Two</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" href="assets/favicon.PNG" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
@@ -12,31 +13,35 @@
 </head>
 
 <body id="contact">
+  <!-- Skip Link -->
+  <a href="#mainContent" class="skipLink">Skip to main content</a>
   <!-- HEADRE STARTS -->
   <header>
     <div class="wrapper">
-      <!-- Nav starts -->
-      <nav>
-        <input id="hamburgerIcon" type="checkbox" name="hamburger">
-        <label for="hamburgerIcon">
-          <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </label>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="logo">
-            <h2>Bar One</h2>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Nav ends -->
       <div class="container">
-        <div class="flexParent">
-          <!-- Logo -->
-          <div class="logoWrap">
-            <h1>Get In Touch</h1>
+        <!-- Nav starts -->
+        <nav>
+          <input id="hamburgerIcon" type="checkbox" name="hamburger">
+          <label for="hamburgerIcon" role="button">
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+          </label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="logo">
+              <h2>Bar One</h2>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- Nav ends -->
+        <div class="container">
+          <div class="flexParent">
+            <!-- Logo -->
+            <div class="logoWrap">
+              <h1>Get In Touch</h1>
+            </div>
           </div>
         </div>
       </div>
@@ -45,7 +50,7 @@
   </header>
   <!-- HEADER ENDS -->
   <!-- MAIN STARTS -->
-  <main>
+  <main id="mainContent">
     <div class="wrapper">
       <div class="container">
         <div class="flexParent">
@@ -62,7 +67,7 @@
             </div>
             <label for="message"></label>
             <textarea class="text" name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
-            <label for="submit"></label>
+            <label for="submit" role="button"></label>
             <input class="button" id="submit" type="submit" value="Submit">
           </form>
           <div class="contactDetails">
