@@ -92,8 +92,6 @@ img {
   }
 }
 
-
-
 .buttonWrap {
   text-align: center;
 }
@@ -109,7 +107,6 @@ nav input {
   display: flex;
   flex-direction: column;
 }
-
 
 input#post,
 input#submit {
@@ -189,7 +186,6 @@ header {
     line-height: 3.5rem;
     padding-bottom: 10px;
   }
-
 
   h2 {
     @include bodyFont (4rem, 2.5rem, 0.1rem, left);
@@ -300,7 +296,6 @@ nav {
     margin-left: 0;
   }
 }
-
 
 .iconWrap {
   display: flex;
@@ -531,7 +526,6 @@ footer {
     border-bottom: 2px solid $dustyOrange;
   }
 
-
   textarea#comment {
     border: 2px solid $dustyOrange;
   }
@@ -586,7 +580,6 @@ footer {
   input#email {
     border-bottom: 2px solid $OffWhite;
   }
-
 
   textarea#message {
     border: 2px solid $OffWhite;
