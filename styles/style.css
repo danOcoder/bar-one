@@ -468,6 +468,10 @@ nav {
   width: 45px;
   height: 45px;
   color: #ffffff; }
+  .iconWrap:active {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #bf2603; }
   .iconWrap i {
     font-size: 1.3rem; }
 
@@ -487,9 +491,6 @@ nav {
 #blog:checked ~ .iconContent .blog,
 #getInTouch:checked ~ .iconContent .getInTouch {
   display: block; }
-
-.deskTopIconMenu {
-  display: none; }
 
 /**** New location Plan ahead ****/
 .newLocPlanAhead {
@@ -534,7 +535,7 @@ nav {
 
 /**** Footer ****/
 footer {
-  background-color: grey;
+  background-color: #111010;
   margin: 0;
   padding: 10px 0; }
 
@@ -1081,29 +1082,57 @@ footer {
     right: 0;
     top: 45%; }
   /**** New space community blog get in touch ****/
-  .mobileIconMenu {
+  .spaceComBlogTouch .container {
+    padding: 100px 0 80px 0; }
+  .iconMenu label {
     display: none; }
-  .deskTopIconMenu {
-    display: block;
-    margin: 150px 0 100px 0; }
-    .deskTopIconMenu .flexParent {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-    .deskTopIconMenu .flexParent:first-of-type {
-      margin-bottom: 40px; }
-    .deskTopIconMenu .iconWrap {
-      margin-right: 20px; }
-    .deskTopIconMenu .contentWrap h2,
-    .deskTopIconMenu .contentWrap p {
+  .iconContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .iconContent h2 {
+      padding: 0 0 20px 0; }
+    .iconContent h2,
+    .iconContent p {
       text-align: left; }
-    .deskTopIconMenu .contentWrap h2 {
-      margin: 0; }
-    .deskTopIconMenu .contentWrap p {
-      margin-top: 20px; }
-  .iconBlock:nth-of-type(even) {
-    margin-left: 20px; }
+    .iconContent .iconWrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .iconContent > div {
+    display: block; }
+  .newSpace,
+  .blog,
+  .community,
+  .getInTouch {
+    -ms-flex-preferred-size: calc(50% - 15px);
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 40px; }
+  .newSpace,
+  .blog {
+    margin-right: 30px; }
+  .innerWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .iconWrap {
+    margin-right: 20px; }
   /**** New location plan ahead  ****/
   .newLocPlanAhead {
     position: relative; }

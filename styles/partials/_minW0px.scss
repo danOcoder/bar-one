@@ -299,6 +299,12 @@ nav {
   height: 45px;
   color: $OffWhite;
 
+  &:active {
+    border: 1px solid $OffWhite;
+    background-color: $OffWhite;
+    color: $rustRed;
+  }
+
   i {
     font-size: 1.3rem;
   }
@@ -326,10 +332,6 @@ nav {
 #blog:checked~.iconContent .blog,
 #getInTouch:checked~.iconContent .getInTouch {
   display: block;
-}
-
-.deskTopIconMenu {
-  display: none;
 }
 
 /**** New location Plan ahead ****/

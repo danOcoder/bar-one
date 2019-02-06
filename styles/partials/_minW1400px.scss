@@ -42,46 +42,65 @@
 
   /**** New space community blog get in touch ****/
 
-  .mobileIconMenu {
-    display: none;
+  .spaceComBlogTouch .container {
+    padding: 100px 0 80px 0;
   }
 
-  .deskTopIconMenu {
-    display: block;
-    margin: 150px 0 100px 0;
+  .iconMenu {
 
-    .flexParent {
-      flex-direction: row;
+    label {
+      display: none;
+    }
+  }
+
+  .iconContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      padding: 0 0 20px 0;
     }
 
-    .flexParent:first-of-type {
-      margin-bottom: 40px;
+    h2,
+    p {
+      text-align: left;
     }
 
     .iconWrap {
-      margin-right: 20px;
-    }
-
-    .contentWrap {
-
-      h2,
-      p {
-        text-align: left;
-      }
-
-      h2 {
-        margin: 0;
-      }
-
-      p {
-        margin-top: 20px;
-      }
+      display: flex;
     }
   }
 
-  .iconBlock:nth-of-type(even) {
-    margin-left: 20px;
+  .iconContent>div {
+    display: block;
   }
+
+  .newSpace,
+  .blog,
+  .community,
+  .getInTouch {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 40px;
+
+  }
+
+  .newSpace,
+  .blog {
+    margin-right: 30px;
+  }
+
+  .innerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .iconWrap {
+    margin-right: 20px;
+  }
+
 
   /**** New location plan ahead  ****/
 
