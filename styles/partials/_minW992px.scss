@@ -1,5 +1,4 @@
 @media (min-width: 992px) {
-
   /**** Global styles ****/
   .container {
     width: 70%;
@@ -34,7 +33,6 @@
   /**** BLOG ****/
 
   #blog {
-
     /**** comments ****/
 
     .commentForm {
@@ -43,7 +41,7 @@
 
     .recentPosts {
       .imgContainer {
-        width: 65%
+        width: 65%;
       }
     }
 
@@ -92,13 +90,11 @@
         }
       }
     }
-
   }
 
   /**** CONACT ****/
 
   #contact {
-
     /**** Main ****/
     main {
       .container {
@@ -177,9 +173,6 @@
       a {
         text-align: left;
       }
-
     }
-
   }
-
 }

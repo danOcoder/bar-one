@@ -185,7 +185,7 @@ input {
 /**** Mixins ****/
 /**** Global Styles ****/
 html {
-  font-size: 93.7%;
+  font-size: 125%;
   /*
     62.5% = units of 10px
     93.7% = units of 15px
@@ -196,20 +196,20 @@ body {
   overflow-x: hidden; }
 
 h2 {
-  font-family: 'Chathura', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #ffffff;
-  font-size: 3.4rem;
-  line-height: 2.9rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
   letter-spacing: 0.1rem;
   text-align: center;
   margin: 20px 0; }
 
 p,
 a {
-  font-family: 'Chathura', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #ffffff;
-  font-size: 1.9rem;
-  line-height: 1.45rem;
+  font-size: 1rem;
+  line-height: 1.6;
   letter-spacing: 0.05rem;
   text-align: center; }
 
@@ -245,14 +245,14 @@ img {
 .button {
   color: #ffffff;
   border: 1px solid transparent;
-  background-color: #bf2603;
+  background-color: #985e6d;
   padding: 23px 18px;
   display: inline-block;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border-radius: 3px; }
   .button:hover {
-    color: #ff8327;
-    background-color: #111010;
-    border: 1px solid #ff8327; }
+    color: #985e6d;
+    background-color: #494e6b; }
 
 .buttonWrap {
   text-align: center; }
@@ -274,17 +274,14 @@ nav input {
 
 input#post,
 input#submit {
-  font-family: 'Chathura', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #ffffff;
-  font-size: 1.9rem;
+  font-size: 1rem;
   line-height: 1.45rem;
   letter-spacing: 0.05rem;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto 0;
   display: block; }
-  input#posthover,
-  input#submithover {
-    color: #ff8327; }
 
 input#name,
 input#email,
@@ -320,14 +317,14 @@ textarea#comment::placeholder,
 textarea#message::placeholder {
   color: #ffffff; }
 
-input[type=text]#name,
-input[type=email]#email,
-input[type=textarea]#comment,
-input[type=textarea]#message {
+input[type='text']#name,
+input[type='email']#email,
+input[type='textarea']#comment,
+input[type='textarea']#message {
   color: #ffffff;
-  font-family: 'Chathura', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #ffffff;
-  font-size: 1.9rem;
+  font-size: 1rem;
   line-height: 1.45rem;
   letter-spacing: 0.05rem;
   text-align: left; }
@@ -351,22 +348,24 @@ textarea#message {
 /**** Home Header ****/
 header {
   min-height: 600px;
-  background: url(../assets/homeImage1.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 34, 49, 0.7)), to(rgba(25, 34, 49, 0.7))), url(../assets/homeImage1.jpg);
+  background: -webkit-linear-gradient(rgba(25, 34, 49, 0.7), rgba(25, 34, 49, 0.7)), url(../assets/homeImage1.jpg);
+  background: -o-linear-gradient(rgba(25, 34, 49, 0.7), rgba(25, 34, 49, 0.7)), url(../assets/homeImage1.jpg);
+  background: linear-gradient(rgba(25, 34, 49, 0.7), rgba(25, 34, 49, 0.7)), url(../assets/homeImage1.jpg);
   background-size: cover;
   background-position: center center;
   padding: 1px; }
   header h1 {
-    font-family: 'Tulpen One', cursive;
-    font-size: 8rem;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2.3rem;
     letter-spacing: 0.05rem;
-    color: #ff8327;
-    text-align: left;
-    line-height: 3.5rem;
-    padding-bottom: 10px; }
-  header h2 {
-    font-family: 'Chathura', sans-serif;
     color: #ffffff;
-    font-size: 4rem;
+    text-align: left;
+    line-height: 1.5rem; }
+  header h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    font-size: 1.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -397,7 +396,7 @@ nav {
   nav ul {
     position: absolute;
     top: 80px;
-    right: -95px;
+    right: -120px;
     -webkit-transition: right 600ms;
     -o-transition: right 600ms;
     transition: right 600ms;
@@ -409,28 +408,30 @@ nav {
     nav ul .logo {
       display: none; }
       nav ul .logo h2 {
-        font-family: 'Tulpen One', cursive;
-        font-size: 3rem;
+        font-family: 'Major Mono Display', monospace;
+        font-size: 2rem;
         letter-spacing: 0rem;
-        color: #ff8327;
+        color: #ffffff;
         text-align: left;
         color: #ffffff;
+        line-height: 1;
         margin: 0; }
     nav ul a {
-      font-family: 'Chathura', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #ffffff;
-      font-size: 2.5rem;
+      font-size: 1.2rem;
       line-height: 1.45rem;
       letter-spacing: 0.1rem;
-      text-align: right; }
+      text-align: right;
+      padding-bottom: 5px; }
       nav ul a:hover {
-        color: #ff8327; }
+        border-bottom: 3px solid #985e6d; }
 
 #hamburgerIcon:checked ~ ul {
   right: 18px; }
 
 #hamburgerIcon:checked + label i {
-  color: #ff8327; }
+  color: #985e6d; }
 
 .hamburger {
   margin-bottom: 20px; }
@@ -449,8 +450,11 @@ nav {
 
 /**** New space community blog get in touch ****/
 .spaceComBlogTouch {
-  background-color: #111010;
+  background-color: #ffffff;
   padding: 1px; }
+  .spaceComBlogTouch h2,
+  .spaceComBlogTouch p {
+    color: #192231; }
   .spaceComBlogTouch .container {
     padding: 50px 0 40px 0; }
   .spaceComBlogTouch label {
@@ -474,17 +478,15 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border: 1px solid #bf2603;
-  background-color: #bf2603;
   padding: 20px;
-  border-radius: 50%;
+  border-radius: 3px;
   width: 45px;
   height: 45px;
-  color: #ffffff; }
+  color: #ffffff;
+  background-color: #192231; }
   .iconWrap:active {
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    color: #bf2603; }
+    background-color: #985e6d;
+    color: #192231; }
   .iconWrap i {
     font-size: 1.3rem; }
 
@@ -507,7 +509,7 @@ nav {
 
 /**** New location Plan ahead ****/
 .newLocPlanAhead {
-  background-color: #220303;
+  background-color: #192231;
   padding: 50px 0 40px 0; }
   .newLocPlanAhead p {
     text-align: center; }
@@ -520,8 +522,11 @@ nav {
 
 /**** Events ****/
 .events {
-  background-color: #111010;
+  background-color: #ffffff;
   padding: 1px; }
+  .events h2,
+  .events p {
+    color: #192231; }
 
 .events1 {
   padding: 50px 0 40px 0; }
@@ -534,7 +539,6 @@ nav {
     padding-top: 40px; }
 
 .events3 {
-  background-color: #220303;
   padding: 50px 0 40px 0; }
   .events3 .flexParent {
     -webkit-box-orient: horizontal;
@@ -548,7 +552,7 @@ nav {
 
 /**** Footer ****/
 footer {
-  background-color: #111010;
+  background-color: #192231;
   margin: 0;
   padding: 10px 0; }
 
@@ -558,52 +562,56 @@ footer {
   /**** Blog main ****/
   /**** Comments ****/ }
   #blog main {
-    background-color: #111010; }
+    background-color: #ffffff; }
   #blog header {
-    background: url(../assets/blogHeader1.jpg);
     min-height: 600px; }
     #blog header h1 {
-      font-family: 'Chathura', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #ffffff;
-      font-size: 7rem;
+      font-size: 2.8rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: center; }
   #blog .recentPosts .container {
-    background-color: #220303;
+    background-color: #494e6b;
     padding: 50px 20px 40px 20px; }
   #blog .recentPosts li {
     text-align: center;
     padding-bottom: 15px; }
   #blog .recentPosts li::before {
-    content: "\2022";
+    content: '\2022';
     /* \2022 is the CSS Code/unicode for a bullet */
-    color: #ff8327;
+    color: #985e6d;
     font-weight: 900;
     display: inline-block;
     width: 20px;
     margin-left: -20px; }
   #blog .recentPosts .buttonWrap {
     padding-top: 20px; }
+  #blog .recentPosts .button:hover {
+    background-color: #192231; }
   #blog .blogMain {
-    background-color: #111010; }
+    background-color: #ffffff; }
   #blog .blogPosts {
     padding: 50px 0 40px 0; }
+    #blog .blogPosts h2,
+    #blog .blogPosts p {
+      color: #192231; }
     #blog .blogPosts h3 {
-      font-family: 'Chathura', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #ffffff;
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       line-height: 1.45rem;
       letter-spacing: 0.05rem;
       text-align: center;
-      color: #ff8327;
+      color: #985e6d;
       margin-bottom: 20px; }
     #blog .blogPosts p {
       margin-bottom: 20px; }
     #blog .blogPosts p:last-of-type {
       margin-bottom: 0; }
   #blog .comments {
-    background-color: #111010; }
+    background-color: #192231; }
     #blog .comments .commentWrap {
       padding: 50px 0 40px 0; }
     #blog .comments .contentWrap {
@@ -611,65 +619,60 @@ footer {
     #blog .comments .imgContainer {
       margin-bottom: 15px; }
     #blog .comments h3 {
-      font-family: 'Chathura', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #ffffff;
-      font-size: 2rem;
+      font-size: 1.2rem;
       line-height: 1.45rem;
       letter-spacing: 0.05rem;
       text-align: center;
-      color: #ff8327;
+      color: #985e6d;
       margin-bottom: 20px; }
   #blog form {
     padding: 50px 0 40px 0; }
   #blog input#name,
   #blog input#email,
   #blog textarea#comment {
-    background-color: #111010; }
-  #blog input#name,
-  #blog input#email {
-    border-bottom: 2px solid #ff8327; }
-  #blog textarea#comment {
-    border: 2px solid #ff8327; }
+    background-color: #985e6d; }
   #blog label,
   #blog textarea#comment::-webkit-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 1.45rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #blog label,
   #blog textarea#comment:-ms-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 1.45rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #blog label,
   #blog textarea#comment::-ms-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 1.45rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #blog label,
   #blog textarea#comment::placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 1.45rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
+  #blog footer {
+    background-color: #ffffff; }
+    #blog footer p {
+      color: #192231; }
 
 /**** CONTACT ****/
 #contact {
@@ -678,72 +681,61 @@ footer {
   /**** Form ****/
   /**** contact details ****/ }
   #contact header {
-    background: url(../assets/contactHeader2.jpg);
     min-height: 500px; }
     #contact header h1 {
-      font-family: 'Chathura', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: #ffffff;
-      font-size: 5rem;
+      font-size: 2.8rem;
       line-height: 2.35rem;
       letter-spacing: 0.05rem;
       text-align: center; }
   #contact main {
-    background-color: #111010;
-    padding: 1px; }
+    background-color: #ffffff; }
   #contact form {
-    background-color: #220303;
+    background-color: #192231;
     padding: 50px 20px 40px 20px; }
   #contact input#name,
   #contact input#email,
   #contact textarea#message {
-    background-color: #220303; }
-  #contact input#name,
-  #contact input#email {
-    border-bottom: 2px solid #ffffff; }
-  #contact textarea#message {
-    border: 2px solid #ffffff; }
+    background-color: #985e6d; }
   #contact label,
   #contact textarea#message::-webkit-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #contact label,
   #contact textarea#message:-ms-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #contact label,
   #contact textarea#message::-ms-input-placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #contact label,
   #contact textarea#message::placeholder {
-    font-family: 'Chathura', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.05rem;
     text-align: left;
-    color: #ffffff;
-    padding-left: 20px; }
+    color: #ffffff; }
   #contact .contactDetails {
-    background-color: #111010;
+    background-color: #ffffff;
     padding: 50px 20px 40px 20px; }
     #contact .contactDetails ul {
       display: -webkit-box;
@@ -763,9 +755,14 @@ footer {
       font-size: 1.5rem; }
     #contact .contactDetails a {
       display: block;
-      text-align: center; }
+      text-align: center;
+      color: #192231;
+      padding: 10px; }
       #contact .contactDetails a:hover {
-        color: #ff8327; }
+        background-color: #192231;
+        color: #985e6d;
+        border-radius: 3px;
+        padding: 10px; }
   #contact .email,
   #contact .address {
     margin-bottom: 20px; }
@@ -775,8 +772,8 @@ footer {
 @media (min-width: 320px) {
   /**** Events ****/
   .events2 .imgContainer {
-    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-    box-shadow: -15px 15px 0px 4px #ff8327;
+    -webkit-box-shadow: -15px 15px 0px 4px #494e6b;
+    box-shadow: -15px 15px 0px 4px #494e6b;
     width: 60%; }
   .events2 h2 {
     margin: 40px 0 20px 0; } }
@@ -787,17 +784,16 @@ footer {
     width: 80%; }
   /**** Header ****/
   header h1 {
-    font-family: 'Tulpen One', cursive;
-    font-size: 10rem;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3rem;
     letter-spacing: 0.05rem;
-    color: #ff8327;
-    text-align: left;
-    line-height: 3.5rem;
-    padding-bottom: 25px; }
-  header h2 {
-    font-family: 'Chathura', sans-serif;
     color: #ffffff;
-    font-size: 6rem;
+    text-align: left;
+    line-height: 2rem; }
+  header h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
     text-align: left;
@@ -818,19 +814,12 @@ footer {
   #blog {
     /**** Header ****/
     /**** Blog main ****/ }
-    #blog header h1 {
-      font-family: 'Chathura', sans-serif;
-      color: #ffffff;
-      font-size: 10rem;
-      line-height: 2.35rem;
-      letter-spacing: 0.05rem;
-      text-align: left; }
     #blog .blogPosts .imgContainer {
-      -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-      box-shadow: -15px 15px 0px 4px #ff8327; }
+      -webkit-box-shadow: -15px 15px 0px 4px #985e6d;
+      box-shadow: -15px 15px 0px 4px #985e6d; }
     #blog .recentPosts .imgContainer {
-      -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
-      box-shadow: 15px 15px 0px 4px #ff8327;
+      -webkit-box-shadow: 15px 15px 0px 4px #985e6d;
+      box-shadow: 15px 15px 0px 4px #985e6d;
       width: 70%; }
   /**** CONTACT ****/
   #contact .contactDetails ul {
@@ -839,34 +828,24 @@ footer {
   #contact form {
     margin: 40px auto 40px;
     width: 85%;
-    -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
-    box-shadow: 15px 15px 0px 4px #ff8327; } }
+    -webkit-box-shadow: 15px 15px 0px 4px #494e6b;
+    box-shadow: 15px 15px 0px 4px #494e6b; } }
 
 @media (min-width: 768px) {
-  /**** Global Styles ****/
-  html {
-    font-size: 125%;
-    /*
-      62.5% = units of 10px
-      93.7% = units of 15px
-      125% = units of 20px
-       */ }
   /**** Header ****/
   header {
     min-height: 700px; }
     header h1 {
-      font-family: 'Tulpen One', cursive;
-      font-size: 13.05rem;
+      font-family: 'Major Mono Display', monospace;
+      font-size: 4.5rem;
       letter-spacing: 0.7rem;
-      color: #ff8327;
-      text-align: left;
-      line-height: 3.5rem;
-      padding-bottom: 20px; }
-    header h2 {
-      font-family: 'Chathura', sans-serif;
       color: #ffffff;
-      font-size: 4.15rem;
-      line-height: 5.5rem;
+      text-align: left; }
+    header h2 {
+      font-family: 'Roboto Mono', monospace;
+      color: #ffffff;
+      font-size: 2.5rem;
+      line-height: 2;
       letter-spacing: 0.1rem;
       text-align: left; }
     header nav {
@@ -898,28 +877,24 @@ footer {
           margin: 0 25px; }
         header nav ul .logo {
           display: block; }
-          header nav ul .logo h2 {
-            line-height: 0px; }
         header nav ul a {
-          font-family: 'Chathura', sans-serif;
+          font-family: 'Roboto Mono', monospace;
           color: #ffffff;
-          font-size: 1.9rem;
+          font-size: 1.4rem;
           line-height: 1.45rem;
           letter-spacing: 0.1rem;
           text-align: right; }
-          header nav ul a:hover {
-            color: #ff8327; }
     header .hamburger {
       display: none; }
   /**** New location plan ahead starts  ****/
   .newLocPlanAhead h2 {
     padding-top: 40px; }
   .leftImg {
-    -webkit-box-shadow: 15px 15px 0px 4px #ff8327;
-    box-shadow: 15px 15px 0px 4px #ff8327; }
+    -webkit-box-shadow: 15px 15px 0px 4px #985e6d;
+    box-shadow: 15px 15px 0px 4px #985e6d; }
   .rightImg {
-    -webkit-box-shadow: -15px 15px 0px 4px #ff8327;
-    box-shadow: -15px 15px 0px 4px #ff8327; }
+    -webkit-box-shadow: -15px 15px 0px 4px #985e6d;
+    box-shadow: -15px 15px 0px 4px #985e6d; }
   /**** Events ****/
   .events2 .container {
     width: 90%; }
@@ -941,13 +916,6 @@ footer {
   /**** BLOG ****/
   #blog {
     /**** Header ****/ }
-    #blog header h1 {
-      font-family: 'Chathura', sans-serif;
-      color: #ffffff;
-      font-size: 6rem;
-      line-height: 2.35rem;
-      letter-spacing: 0.05rem;
-      text-align: left; }
     #blog header .flexParent {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -962,13 +930,6 @@ footer {
   /**** CONTACT ****/
   #contact {
     /**** Header ****/ }
-    #contact header h1 {
-      font-family: 'Chathura', sans-serif;
-      color: #ffffff;
-      font-size: 6rem;
-      line-height: 2.35rem;
-      letter-spacing: 0.05rem;
-      text-align: left; }
     #contact header .flexParent {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -1297,17 +1258,13 @@ footer {
       #blog .ourMission .button {
         margin: 0;
         text-align: left;
-        text-transform: capitalize;
-        color: #ff8327;
-        background-color: #220303;
-        border: none;
-        padding: 0; }
+        text-transform: capitalize; }
     #blog .blogMain {
       -ms-flex-preferred-size: 60%;
       flex-basis: 60%; }
     #blog .blogPosts {
-      border-left: 4px solid #ff8327;
-      border-bottom: 4px solid #ff8327;
+      border-left: 4px solid #985e6d;
+      border-bottom: 4px solid #985e6d;
       position: relative;
       padding: 420px 0 40px; }
       #blog .blogPosts .imgContainer {

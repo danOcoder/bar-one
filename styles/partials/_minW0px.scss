@@ -6,18 +6,23 @@ $dustyOrange: #ff8327;
 $darkRed: #220303;
 $black: #111010;
 
+$lightPurple: #98878f;
+$purple: #985e6d;
+$lightBlue: #494e6b;
+$darkBlue: #192231;
+
 /**** Mixins ****/
 
-@mixin headingFont ($fontSize, $letterSpacing) {
-  font-family: 'Tulpen One', cursive;
+@mixin headingFont($fontSize, $letterSpacing) {
+  font-family: 'Major Mono Display', monospace;
   font-size: $fontSize;
   letter-spacing: $letterSpacing;
-  color: $dustyOrange;
+  color: $OffWhite;
   text-align: left;
 }
 
-@mixin bodyFont ($fontSize, $lineHeight, $letterSpacing, $textAlign) {
-  font-family: 'Chathura', sans-serif;
+@mixin bodyFont($fontSize, $lineHeight, $letterSpacing, $textAlign) {
+  font-family: 'Roboto Mono', monospace;
   color: $OffWhite;
   font-size: $fontSize;
   line-height: $lineHeight;
@@ -28,7 +33,7 @@ $black: #111010;
 /**** Global Styles ****/
 
 html {
-  font-size: 93.7%;
+  font-size: 125%;
   /*
     62.5% = units of 10px
     93.7% = units of 15px
@@ -41,13 +46,13 @@ body {
 }
 
 h2 {
-  @include bodyFont (3.4rem, 2.9rem, 0.1rem, center);
+  @include bodyFont(1.8rem, 1.6, 0.1rem, center);
   margin: 20px 0;
 }
 
 p,
 a {
-  @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
+  @include bodyFont(1rem, 1.6, 0.05rem, center);
 }
 
 .wrapper {
@@ -80,15 +85,15 @@ img {
 .button {
   color: #ffffff;
   border: 1px solid transparent;
-  background-color: $rustRed;
+  background-color: $purple;
   padding: 23px 18px;
   display: inline-block;
   text-transform: uppercase;
+  border-radius: 3px;
 
   &:hover {
-    color: $dustyOrange;
-    background-color: $black;
-    border: 1px solid $dustyOrange;
+    color: $purple;
+    background-color: $lightBlue;
   }
 }
 
@@ -110,13 +115,9 @@ nav input {
 
 input#post,
 input#submit {
-  @include bodyFont (1.9rem, 1.45rem, 0.05rem, center);
-  margin: 0 auto;
+  @include bodyFont(1rem, 1.45rem, 0.05rem, center);
+  margin: 30px auto 0;
   display: block;
-
-  &hover {
-    color: $dustyOrange;
-  }
 }
 
 input#name,
@@ -145,12 +146,12 @@ textarea#message::placeholder {
   color: $OffWhite;
 }
 
-input[type=text]#name,
-input[type=email]#email,
-input[type=textarea]#comment,
-input[type=textarea]#message {
+input[type='text']#name,
+input[type='email']#email,
+input[type='textarea']#comment,
+input[type='textarea']#message {
   color: $OffWhite;
-  @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+  @include bodyFont(1rem, 1.45rem, 0.05rem, left);
 }
 
 .name,
@@ -176,19 +177,19 @@ textarea#message {
 
 header {
   min-height: 600px;
-  background: url(../assets/homeImage1.jpg);
+  background: linear-gradient(rgba(25, 34, 49, 0.7), rgba(25, 34, 49, 0.7)),
+    url(../assets/homeImage1.jpg);
   background-size: cover;
   background-position: center center;
   padding: 1px;
 
   h1 {
-    @include headingFont(8rem, 0.05rem);
-    line-height: 3.5rem;
-    padding-bottom: 10px;
+    @include headingFont(2.3rem, 0.05rem);
+    line-height: 1.5rem;
   }
 
   h2 {
-    @include bodyFont (4rem, 2.5rem, 0.1rem, left);
+    @include bodyFont(1.5rem, 2.5rem, 0.1rem, left);
     margin: 0;
   }
 
@@ -212,7 +213,7 @@ nav {
   ul {
     position: absolute;
     top: 80px;
-    right: -95px;
+    right: -120px;
     transition: right 600ms;
     transition-timing-function: cubic-bezier(0.33, -0.01, 0.18, 0.94);
 
@@ -224,29 +225,30 @@ nav {
       display: none;
 
       h2 {
-
-        @include headingFont(3rem, 0rem);
+        @include headingFont(2rem, 0rem);
         color: $OffWhite;
+        line-height: 1;
         margin: 0;
       }
     }
 
     a {
-      @include bodyFont (2.5rem, 1.45rem, 0.1rem, right);
+      @include bodyFont(1.2rem, 1.45rem, 0.1rem, right);
+      padding-bottom: 5px;
 
       &:hover {
-        color: $dustyOrange;
+        border-bottom: 3px solid $purple;
       }
     }
   }
 }
 
-#hamburgerIcon:checked~ul {
+#hamburgerIcon:checked ~ ul {
   right: 18px;
 }
 
-#hamburgerIcon:checked+label i {
-  color: $dustyOrange;
+#hamburgerIcon:checked + label i {
+  color: $purple;
 }
 
 .hamburger {
@@ -259,11 +261,11 @@ nav {
     cursor: pointer;
     display: block;
   }
-
 }
 
 .logoWrap {
   margin-top: 230px;
+  // background-color: rgba(25, 34, 49, 0.7);
 }
 
 .headerOverlay {
@@ -273,8 +275,13 @@ nav {
 /**** New space community blog get in touch ****/
 
 .spaceComBlogTouch {
-  background-color: $black;
+  background-color: $OffWhite;
   padding: 1px;
+
+  h2,
+  p {
+    color: $darkBlue;
+  }
 
   .container {
     padding: 50px 0 40px 0;
@@ -301,18 +308,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $rustRed;
-  background-color: $rustRed;
   padding: 20px;
-  border-radius: 50%;
+  border-radius: 3px;
   width: 45px;
   height: 45px;
   color: $OffWhite;
+  background-color: $darkBlue;
 
   &:active {
-    border: 1px solid $OffWhite;
-    background-color: $OffWhite;
-    color: $rustRed;
+    background-color: $purple;
+    color: $darkBlue;
   }
 
   i {
@@ -333,21 +338,21 @@ nav {
   }
 }
 
-.iconContent>div {
+.iconContent > div {
   display: none;
 }
 
-#newSpace:checked~.iconContent .newSpace,
-#community:checked~.iconContent .community,
-#blog:checked~.iconContent .blog,
-#getInTouch:checked~.iconContent .getInTouch {
+#newSpace:checked ~ .iconContent .newSpace,
+#community:checked ~ .iconContent .community,
+#blog:checked ~ .iconContent .blog,
+#getInTouch:checked ~ .iconContent .getInTouch {
   display: block;
 }
 
 /**** New location Plan ahead ****/
 
 .newLocPlanAhead {
-  background-color: $darkRed;
+  background-color: $darkBlue;
   padding: 50px 0 40px 0;
 
   p {
@@ -370,8 +375,13 @@ nav {
 /**** Events ****/
 
 .events {
-  background-color: $black;
+  background-color: $OffWhite;
   padding: 1px;
+
+  h2,
+  p {
+    color: $darkBlue;
+  }
 }
 
 .events1 {
@@ -391,7 +401,6 @@ nav {
 }
 
 .events3 {
-  background-color: $darkRed;
   padding: 50px 0 40px 0;
 
   .flexParent {
@@ -410,7 +419,7 @@ nav {
 /**** Footer ****/
 
 footer {
-  background-color: $black;
+  background-color: $darkBlue;
   margin: 0;
   padding: 10px 0;
 }
@@ -418,16 +427,13 @@ footer {
 /**** BLOG ****/
 
 #blog {
-
   main {
-    background-color: $black;
+    background-color: $OffWhite;
   }
 
   header {
-    background: url(../assets/blogHeader1.jpg);
-
     h1 {
-      @include bodyFont (7rem, 2.35rem, 0.05rem, center);
+      @include bodyFont(2.8rem, 2.35rem, 0.05rem, center);
     }
 
     min-height: 600px;
@@ -436,9 +442,8 @@ footer {
   /**** Recent Posts ****/
 
   .recentPosts {
-
     .container {
-      background-color: $darkRed;
+      background-color: $lightBlue;
       padding: 50px 20px 40px 20px;
     }
 
@@ -448,9 +453,9 @@ footer {
     }
 
     li::before {
-      content: "\2022";
+      content: '\2022';
       /* \2022 is the CSS Code/unicode for a bullet */
-      color: $dustyOrange;
+      color: $purple;
       font-weight: 900;
       display: inline-block;
       width: 20px;
@@ -460,21 +465,29 @@ footer {
     .buttonWrap {
       padding-top: 20px;
     }
+
+    .button:hover {
+      background-color: $darkBlue;
+    }
   }
 
   /**** Blog main ****/
 
   .blogMain {
-    background-color: $black;
+    background-color: $OffWhite;
   }
 
   .blogPosts {
-
     padding: 50px 0 40px 0;
 
+    h2,
+    p {
+      color: $darkBlue;
+    }
+
     h3 {
-      @include bodyFont (1.7rem, 1.45rem, 0.05rem, center);
-      color: $dustyOrange;
+      @include bodyFont(1.2rem, 1.45rem, 0.05rem, center);
+      color: $purple;
       margin-bottom: 20px;
     }
 
@@ -490,7 +503,7 @@ footer {
   /**** Comments ****/
 
   .comments {
-    background-color: $black;
+    background-color: $darkBlue;
 
     .commentWrap {
       padding: 50px 0 40px 0;
@@ -505,8 +518,8 @@ footer {
     }
 
     h3 {
-      @include bodyFont (2rem, 1.45rem, 0.05rem, center);
-      color: $dustyOrange;
+      @include bodyFont(1.2rem, 1.45rem, 0.05rem, center);
+      color: $purple;
       margin-bottom: 20px;
     }
   }
@@ -518,38 +531,31 @@ footer {
   input#name,
   input#email,
   textarea#comment {
-    background-color: $black;
-  }
-
-  input#name,
-  input#email {
-    border-bottom: 2px solid $dustyOrange;
-  }
-
-  textarea#comment {
-    border: 2px solid $dustyOrange;
+    background-color: $purple;
   }
 
   label,
   textarea#comment::placeholder {
-    @include bodyFont (1.9rem, 1.45rem, 0.05rem, left);
+    @include bodyFont(1.1rem, 1.45rem, 0.05rem, left);
     color: $OffWhite;
-    padding-left: 20px;
   }
 
+  footer {
+    background-color: $OffWhite;
+    p {
+      color: $darkBlue;
+    }
+  }
 }
 
 /**** CONTACT ****/
 
 #contact {
-
   /**** header ****/
 
   header {
-    background: url(../assets/contactHeader2.jpg);
-
     h1 {
-      @include bodyFont (5rem, 2.35rem, 0.05rem, center);
+      @include bodyFont(2.8rem, 2.35rem, 0.05rem, center);
     }
 
     min-height: 500px;
@@ -558,44 +564,32 @@ footer {
   /**** Main ****/
 
   main {
-    background-color: $black;
-    padding: 1px;
+    background-color: $OffWhite;
   }
 
   /**** Form ****/
 
   form {
-    background-color: $darkRed;
+    background-color: $darkBlue;
     padding: 50px 20px 40px 20px;
-
   }
 
   input#name,
   input#email,
   textarea#message {
-    background-color: $darkRed;
-  }
-
-  input#name,
-  input#email {
-    border-bottom: 2px solid $OffWhite;
-  }
-
-  textarea#message {
-    border: 2px solid $OffWhite;
+    background-color: $purple;
   }
 
   label,
   textarea#message::placeholder {
-    @include bodyFont (1.9rem, 2rem, 0.05rem, left);
+    @include bodyFont(1.1rem, 2rem, 0.05rem, left);
     color: $OffWhite;
-    padding-left: 20px;
   }
 
   /**** contact details ****/
 
   .contactDetails {
-    background-color: $black;
+    background-color: $OffWhite;
     padding: 50px 20px 40px 20px;
 
     ul {
@@ -616,9 +610,14 @@ footer {
     a {
       display: block;
       text-align: center;
+      color: $darkBlue;
+      padding: 10px;
 
       &:hover {
-        color: $dustyOrange;
+        background-color: $darkBlue;
+        color: $purple;
+        border-radius: 3px;
+        padding: 10px;
       }
     }
   }
@@ -631,5 +630,4 @@ footer {
   .phone {
     margin-bottom: 10px;
   }
-
 }

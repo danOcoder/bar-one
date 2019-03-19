@@ -1,101 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact - Dan O'Connor Project Two</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" href="assets/favicon.PNG" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Contact - Dan O'Connor Project Two</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="image/png" href="assets/favicon.PNG" rel="icon">
-  <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-
-<body id="contact">
-  <!-- Skip Link -->
-  <a href="#mainContent" class="skipLink">Skip to main content</a>
-  <!-- HEADRE STARTS -->
-  <header>
-    <div class="wrapper">
-      <div class="container">
-        <!-- Nav starts -->
-        <nav>
-          <input id="hamburgerIcon" type="checkbox" name="hamburger">
-          <label for="hamburgerIcon" role="button">
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-          </label>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li class="logo">
-              <h2>Bar One</h2>
-            </li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- Nav ends -->
+  <body id="contact">
+    <!-- Skip Link -->
+    <a href="#mainContent" class="skipLink">Skip to main content</a>
+    <!-- HEADRE STARTS -->
+    <header>
+      <div class="wrapper">
+        <div class="container">
+          <!-- Nav starts -->
+          <nav>
+            <input id="hamburgerIcon" type="checkbox" name="hamburger" />
+            <label for="hamburgerIcon" role="button">
+              <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </label>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li class="logo">
+                <h2>Bar One</h2>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- Nav ends -->
+          <div class="container">
+            <div class="flexParent">
+              <!-- Logo -->
+              <div class="logoWrap">
+                <h1>Get In Touch</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- logo ends -->
+    </header>
+    <!-- HEADER ENDS -->
+    <!-- MAIN STARTS -->
+    <main id="mainContent">
+      <div class="wrapper">
         <div class="container">
           <div class="flexParent">
-            <!-- Logo -->
-            <div class="logoWrap">
-              <h1>Get In Touch</h1>
+            <form action="#" class="contact">
+              <div class="contactForm clearfix">
+                <div class="name">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" />
+                </div>
+                <div class="email">
+                  <label for="email">Email Address</label>
+                  <input id="email" type="email" />
+                </div>
+              </div>
+              <label for="message"></label>
+              <textarea
+                class="text"
+                name="message"
+                id="message"
+                placeholder="message"
+                cols="30"
+                rows="5"
+              ></textarea>
+              <label for="submit" role="button"></label>
+              <input class="button" id="submit" type="submit" value="Submit" />
+            </form>
+            <div class="contactDetails">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </li>
+              </ul>
+              <a class="emailLink" href="#">info@email.com</a>
+              <a class="phone" href="#">123-456-7890</a>
+              <a class="address" href="#"
+                >123 Queen St West Unit 10 <br />Toronto, Ontario
+                <br />M6V205</a
+              >
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- logo ends -->
-  </header>
-  <!-- HEADER ENDS -->
-  <!-- MAIN STARTS -->
-  <main id="mainContent">
-    <div class="wrapper">
-      <div class="container">
-        <div class="flexParent">
-          <form action="#" class="contact">
-            <div class="contactForm clearfix">
-              <div class="name">
-                <label for="name">Name</label>
-                <input id="name" type="text">
-              </div>
-              <div class="email">
-                <label for="email">Email Address</label>
-                <input id="email" type="email">
-              </div>
-            </div>
-            <label for="message"></label>
-            <textarea class="text" name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
-            <label for="submit" role="button"></label>
-            <input class="button" id="submit" type="submit" value="Submit">
-          </form>
-          <div class="contactDetails">
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
-            <a class="email" href="#">info@email.com</a>
-            <a class="phone" href="#">123-456-7890</a>
-            <a class="address" href="#">123 Queen St West Unit 10 <br>Toronto, Ontario <br>M6V205</a>
-          </div>
+    </main>
+    <!-- FOOTER STARTS -->
+    <footer>
+      <div class="wrapper">
+        <div class="container">
+          <p>Copyright © 2019 HackerYou</p>
         </div>
       </div>
-    </div>
-  </main>
-  <!-- FOOTER STARTS -->
-  <footer>
-    <div class="wrapper">
-      <div class="container">
-        <p>Copyright © 2019 HackerYou</p>
-      </div>
-    </div>
-  </footer>
-  <!-- FOOTER ENDS -->
-
-
-</body>
-
+    </footer>
+    <!-- FOOTER ENDS -->
+  </body>
 </html>

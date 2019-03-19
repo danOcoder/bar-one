@@ -1,5 +1,4 @@
 @media (min-width: 480px) {
-
   /**** Global styles ****/
   .container {
     width: 80%;
@@ -7,27 +6,24 @@
 
   /**** Header ****/
   header {
-
     h1 {
-      @include headingFont(10rem, 0.05rem);
-      line-height: 3.5rem;
-      padding-bottom: 25px;
+      @include headingFont(3rem, 0.05rem);
+      line-height: 2rem;
     }
 
     h2 {
-      @include bodyFont (6rem, 2.5rem, 0.1rem, left);
+      @include bodyFont(2rem, 2.5rem, 0.1rem, left);
       margin: 0;
     }
   }
 
-  #hamburgerIcon:checked~ul {
+  #hamburgerIcon:checked ~ ul {
     right: 50px;
   }
 
   /**** New space community blog get in touch ****/
 
   .spaceComBlogTouch {
-
     .iconWrap {
       padding: 30px;
       width: 65px;
@@ -50,27 +46,26 @@
   /**** BLOG ****/
 
   #blog {
-
     /**** Header ****/
 
-    header {
-      h1 {
-        @include bodyFont (10rem, 2.35rem, 0.05rem, left);
-      }
-    }
+    // header {
+    //   h1 {
+    //     @include bodyFont(10rem, 2.35rem, 0.05rem, left);
+    //   }
+    // }
 
     /**** Blog main ****/
 
     .blogPosts {
       .imgContainer {
-        box-shadow: -15px 15px 0px 4px $dustyOrange;
+        box-shadow: -15px 15px 0px 4px $purple;
       }
     }
 
     .recentPosts {
       .imgContainer {
-        box-shadow: 15px 15px 0px 4px $dustyOrange;
-        width: 70%
+        box-shadow: 15px 15px 0px 4px $purple;
+        width: 70%;
       }
     }
   }
@@ -78,9 +73,7 @@
   /**** CONTACT ****/
 
   #contact {
-
     .contactDetails {
-
       ul {
         width: 60%;
         margin: 0 auto 15px;
@@ -90,8 +83,7 @@
     form {
       margin: 40px auto 40px;
       width: 85%;
-      box-shadow: 15px 15px 0px 4px $dustyOrange;
+      box-shadow: 15px 15px 0px 4px $lightBlue;
     }
   }
-
 }

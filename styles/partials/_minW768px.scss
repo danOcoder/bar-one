@@ -1,29 +1,15 @@
 @media (min-width: 768px) {
-
-  /**** Global Styles ****/
-
-  html {
-    font-size: 125%;
-    /*
-      62.5% = units of 10px
-      93.7% = units of 15px
-      125% = units of 20px
-       */
-  }
-
   /**** Header ****/
 
   header {
     min-height: 700px;
 
     h1 {
-      @include headingFont(13.05rem, 0.7rem);
-      line-height: 3.5rem;
-      padding-bottom: 20px;
+      @include headingFont(4.5rem, 0.7rem);
     }
 
     h2 {
-      @include bodyFont (4.15rem, 5.5rem, 0.1rem, left);
+      @include bodyFont(2.5rem, 2, 0.1rem, left);
     }
 
     nav {
@@ -45,25 +31,16 @@
 
         .logo {
           display: block;
-
-          h2 {
-            line-height: 0px;
-          }
         }
 
         a {
-          @include bodyFont (1.9rem, 1.45rem, 0.1rem, right);
-
-          &:hover {
-            color: $dustyOrange;
-          }
+          @include bodyFont(1.4rem, 1.45rem, 0.1rem, right);
         }
       }
     }
 
     .hamburger {
       display: none;
-
     }
   }
 
@@ -76,17 +53,16 @@
   }
 
   .leftImg {
-    box-shadow: 15px 15px 0px 4px $dustyOrange;
+    box-shadow: 15px 15px 0px 4px $purple;
   }
 
   .rightImg {
-    box-shadow: -15px 15px 0px 4px $dustyOrange;
+    box-shadow: -15px 15px 0px 4px $purple;
   }
 
   /**** Events ****/
 
   .events2 {
-
     .container {
       width: 90%;
     }
@@ -118,22 +94,16 @@
   /**** BLOG ****/
 
   #blog {
-
     /**** Header ****/
 
     header {
-
-      h1 {
-        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
-      }
-
       .flexParent {
         justify-content: flex-start;
         align-items: flex-start;
       }
 
       .container {
-        width: 90%
+        width: 90%;
       }
     }
 
@@ -147,14 +117,9 @@
   /**** CONTACT ****/
 
   #contact {
-
     /**** Header ****/
 
     header {
-      h1 {
-        @include bodyFont (6rem, 2.35rem, 0.05rem, left);
-      }
-
       .flexParent {
         justify-content: flex-start;
         align-items: flex-start;
