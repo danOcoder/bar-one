@@ -483,10 +483,9 @@ nav {
   width: 45px;
   height: 45px;
   color: #ffffff;
-  background-color: #192231; }
+  background-color: #985e6d; }
   .iconWrap:active {
-    background-color: #985e6d;
-    color: #192231; }
+    background-color: #192231; }
   .iconWrap i {
     font-size: 1.3rem; }
 

@@ -1,15 +1,10 @@
 /**** Variables ****/
 
-$OffWhite: #ffffff;
-$rustRed: #bf2603;
-$dustyOrange: #ff8327;
-$darkRed: #220303;
-$black: #111010;
-
 $lightPurple: #98878f;
 $purple: #985e6d;
 $lightBlue: #494e6b;
 $darkBlue: #192231;
+$OffWhite: #ffffff;
 
 /**** Mixins ****/
 
@@ -313,11 +308,10 @@ nav {
   width: 45px;
   height: 45px;
   color: $OffWhite;
-  background-color: $darkBlue;
+  background-color: $purple;
 
   &:active {
-    background-color: $purple;
-    color: $darkBlue;
+    background-color: $darkBlue;
   }
 
   i {
