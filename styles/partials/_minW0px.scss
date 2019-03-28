@@ -201,14 +201,10 @@ nav {
   text-align: right;
   margin-top: 20px;
 
-  label {
-    padding-bottom: 20px;
-  }
-
   ul {
     position: absolute;
-    top: 80px;
-    right: -120px;
+    top: 70px;
+    right: 101%;
     transition: right 600ms;
     transition-timing-function: cubic-bezier(0.33, -0.01, 0.18, 0.94);
 
@@ -238,33 +234,49 @@ nav {
   }
 }
 
+.hamburger {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+}
+
+.hamburger div {
+  position: relative;
+  width: 40px;
+  height: 7px;
+  border-radius: 3px;
+  background-color: $OffWhite;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburgerIcon:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+  background-color: $purple;
+}
+
+#hamburgerIcon:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+#hamburgerIcon:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -7px;
+  background-color: $purple;
+}
+
+#hamburgerIcon:checked {
+  right: 18px;
+}
+
 #hamburgerIcon:checked ~ ul {
   right: 18px;
 }
 
-#hamburgerIcon:checked + label i {
-  color: $purple;
-}
-
-.hamburger {
-  margin-bottom: 20px;
-
-  i {
-    color: $OffWhite;
-    font-size: 2rem;
-    float: right;
-    cursor: pointer;
-    display: block;
-  }
-}
-
 .logoWrap {
-  margin-top: 230px;
-  // background-color: rgba(25, 34, 49, 0.7);
-}
-
-.headerOverlay {
-  display: none;
+  margin-top: 270px;
 }
 
 /**** New space community blog get in touch ****/

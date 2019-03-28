@@ -391,12 +391,10 @@ nav {
   justify-content: flex-end;
   text-align: right;
   margin-top: 20px; }
-  nav label {
-    padding-bottom: 20px; }
   nav ul {
     position: absolute;
-    top: 80px;
-    right: -120px;
+    top: 70px;
+    right: 101%;
     -webkit-transition: right 600ms;
     -o-transition: right 600ms;
     transition: right 600ms;
@@ -427,26 +425,50 @@ nav {
       nav ul a:hover {
         border-bottom: 3px solid #985e6d; }
 
+.hamburger {
+  position: absolute;
+  right: 18px;
+  top: 10px; }
+
+.hamburger div {
+  position: relative;
+  width: 40px;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin-top: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+#hamburgerIcon:checked + .hamburger .top-bun {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: 25px;
+  background-color: #985e6d; }
+
+#hamburgerIcon:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#hamburgerIcon:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: -7px;
+  background-color: #985e6d; }
+
+#hamburgerIcon:checked {
+  right: 18px; }
+
 #hamburgerIcon:checked ~ ul {
   right: 18px; }
 
-#hamburgerIcon:checked + label i {
-  color: #985e6d; }
-
-.hamburger {
-  margin-bottom: 20px; }
-  .hamburger i {
-    color: #ffffff;
-    font-size: 2rem;
-    float: right;
-    cursor: pointer;
-    display: block; }
-
 .logoWrap {
-  margin-top: 230px; }
-
-.headerOverlay {
-  display: none; }
+  margin-top: 270px; }
 
 /**** New space community blog get in touch ****/
 .spaceComBlogTouch {
