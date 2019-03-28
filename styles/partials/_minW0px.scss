@@ -168,7 +168,7 @@ textarea#message {
   left: 0;
 }
 
-/**** Home Header ****/
+/**** Header ****/
 
 header {
   min-height: 600px;
@@ -319,18 +319,21 @@ nav {
   border-radius: 3px;
   width: 45px;
   height: 45px;
-  color: $OffWhite;
-  background-color: $purple;
-
-  &:active {
-    background-color: $darkBlue;
-  }
+  color: $purple;
+  background-color: $darkBlue;
 
   i {
     font-size: 1.3rem;
   }
 }
 
+#newSpace:checked + label .iconWrap,
+#community:checked + label .iconWrap,
+#blog:checked + label .iconWrap,
+#getInTouch:checked + label .iconWrap {
+  color: $darkBlue;
+  background-color: $purple;
+}
 .iconContent {
   clear: both;
 
@@ -441,8 +444,6 @@ footer {
     h1 {
       @include bodyFont(2.8rem, 2.35rem, 0.05rem, center);
     }
-
-    min-height: 600px;
   }
 
   /**** Recent Posts ****/
@@ -563,8 +564,6 @@ footer {
     h1 {
       @include bodyFont(2.8rem, 2.35rem, 0.05rem, center);
     }
-
-    min-height: 500px;
   }
 
   /**** Main ****/

@@ -345,7 +345,7 @@ textarea#message {
 .skipLink:focus {
   left: 0; }
 
-/**** Home Header ****/
+/**** Header ****/
 header {
   min-height: 600px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 34, 49, 0.7)), to(rgba(25, 34, 49, 0.7))), url(../assets/homeImage1.jpg);
@@ -504,12 +504,17 @@ nav {
   border-radius: 3px;
   width: 45px;
   height: 45px;
-  color: #ffffff;
-  background-color: #985e6d; }
-  .iconWrap:active {
-    background-color: #192231; }
+  color: #985e6d;
+  background-color: #192231; }
   .iconWrap i {
     font-size: 1.3rem; }
+
+#newSpace:checked + label .iconWrap,
+#community:checked + label .iconWrap,
+#blog:checked + label .iconWrap,
+#getInTouch:checked + label .iconWrap {
+  color: #192231;
+  background-color: #985e6d; }
 
 .iconContent {
   clear: both; }
@@ -584,15 +589,13 @@ footer {
   /**** Comments ****/ }
   #blog main {
     background-color: #ffffff; }
-  #blog header {
-    min-height: 600px; }
-    #blog header h1 {
-      font-family: 'Roboto Mono', monospace;
-      color: #ffffff;
-      font-size: 2.8rem;
-      line-height: 2.35rem;
-      letter-spacing: 0.05rem;
-      text-align: center; }
+  #blog header h1 {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 2.35rem;
+    letter-spacing: 0.05rem;
+    text-align: center; }
   #blog .recentPosts .container {
     background-color: #494e6b;
     padding: 50px 20px 40px 20px; }
@@ -701,15 +704,13 @@ footer {
   /**** Main ****/
   /**** Form ****/
   /**** contact details ****/ }
-  #contact header {
-    min-height: 500px; }
-    #contact header h1 {
-      font-family: 'Roboto Mono', monospace;
-      color: #ffffff;
-      font-size: 2.8rem;
-      line-height: 2.35rem;
-      letter-spacing: 0.05rem;
-      text-align: center; }
+  #contact header h1 {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 2.35rem;
+    letter-spacing: 0.05rem;
+    text-align: center; }
   #contact main {
     background-color: #ffffff; }
   #contact form {
@@ -935,31 +936,31 @@ footer {
     .events2 .contentWrap h2 {
       margin: 0; }
   /**** BLOG ****/
-  #blog {
-    /**** Header ****/ }
-    #blog header .flexParent {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; }
-    #blog header .container {
-      width: 90%; }
-    #blog .recentPosts .imgContainer {
-      width: 60%; }
+  #blog header .flexParent {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  #blog header .container {
+    width: 90%; }
+  #blog header .hamburger {
+    display: none; }
+  #blog .recentPosts .imgContainer {
+    width: 60%; }
   /**** CONTACT ****/
-  #contact {
-    /**** Header ****/ }
-    #contact header .flexParent {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; }
-    #contact .contactDetails ul {
-      width: 50%; } }
+  #contact header .flexParent {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  #contact header .hamburger {
+    display: none; }
+  #contact .contactDetails ul {
+    width: 50%; } }
 
 @media (min-width: 992px) {
   /**** Global styles ****/

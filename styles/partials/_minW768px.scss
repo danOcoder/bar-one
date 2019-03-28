@@ -94,8 +94,6 @@
   /**** BLOG ****/
 
   #blog {
-    /**** Header ****/
-
     header {
       .flexParent {
         justify-content: flex-start;
@@ -104,6 +102,9 @@
 
       .container {
         width: 90%;
+      }
+      .hamburger {
+        display: none;
       }
     }
 
@@ -117,12 +118,13 @@
   /**** CONTACT ****/
 
   #contact {
-    /**** Header ****/
-
     header {
       .flexParent {
         justify-content: flex-start;
         align-items: flex-start;
+      }
+      .hamburger {
+        display: none;
       }
     }
 
