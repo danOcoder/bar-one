@@ -44,6 +44,10 @@
     }
   }
 
+  .logoWrap {
+    margin-top: 200px;
+  }
+
   /**** New location plan ahead starts  ****/
 
   .newLocPlanAhead {
@@ -101,7 +105,7 @@
       }
 
       .container {
-        width: 90%;
+        width: 80%;
       }
       .hamburger {
         display: none;
@@ -125,6 +129,9 @@
       }
       .hamburger {
         display: none;
+      }
+      .container {
+        width: 80%;
       }
     }
 

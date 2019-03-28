@@ -12,7 +12,7 @@
   /**** Header ****/
 
   header {
-    min-height: 100vh;
+    min-height: 90vh;
 
     nav {
       ul {
@@ -28,8 +28,7 @@
   }
 
   .logoWrap {
-    margin-top: 350px;
-    z-index: 99;
+    margin-top: 300px;
   }
 
   .headerOverlay {
@@ -101,20 +100,18 @@
   /**** New location plan ahead  ****/
 
   .newLocPlanAhead {
-    position: relative;
-
     .flexParent {
       flex-direction: row;
     }
 
     .imgContainer {
       margin: 0;
-      position: absolute;
     }
   }
 
   .leftContainer {
-    margin-top: 440px;
+    position: relative;
+    top: -100px;
     width: 45%;
 
     .flexParent {
@@ -122,7 +119,6 @@
     }
 
     .imgContainer {
-      top: -50px;
     }
 
     .container {
@@ -135,15 +131,12 @@
   }
 
   .rightContainer {
-    margin-bottom: 440px;
+    position: relative;
+    bottom: -55px;
     width: 45%;
 
     .flexParent {
       flex-direction: column-reverse;
-    }
-
-    .imgContainer {
-      bottom: -45px;
     }
 
     .container {
@@ -152,6 +145,10 @@
       .buttonWrap {
         text-align: left;
       }
+    }
+
+    .buttonWrap {
+      padding: 40px 0;
     }
   }
 
@@ -210,6 +207,10 @@
     }
 
     /**** Header ****/
+
+    header {
+      min-height: 700px;
+    }
 
     .logoWrap {
       margin-top: 200px;
@@ -280,23 +281,22 @@
 
     .blogMain {
       flex-basis: 60%;
+      position: relative;
+      top: -100px;
     }
 
     .blogPosts {
       border-left: 4px solid $purple;
       border-bottom: 4px solid $purple;
-      position: relative;
-      padding: 420px 0 40px;
+      padding: 0 0 0 15px;
 
       .imgContainer {
-        position: absolute;
-        top: -200px;
-        right: -5px;
-        width: 99%;
+        position: relative;
+        top: -15px;
       }
 
       .contentWrap {
-        padding: 0 40px;
+        padding: 25px 0 40px;
       }
 
       h2,
@@ -329,10 +329,8 @@
   /**** CONTACT ****/
 
   #contact {
-    /**** Header ****/
-
     header {
-      min-height: 600px;
+      min-height: 700px;
 
       .flexParent {
         justify-content: flex-start;

@@ -597,7 +597,7 @@ footer {
     letter-spacing: 0.05rem;
     text-align: center; }
   #blog .recentPosts .container {
-    background-color: #494e6b;
+    background-color: #192231;
     padding: 50px 20px 40px 20px; }
   #blog .recentPosts li {
     text-align: center;
@@ -908,6 +908,8 @@ footer {
           text-align: right; }
     header .hamburger {
       display: none; }
+  .logoWrap {
+    margin-top: 200px; }
   /**** New location plan ahead starts  ****/
   .newLocPlanAhead h2 {
     padding-top: 40px; }
@@ -944,7 +946,7 @@ footer {
     -ms-flex-align: start;
     align-items: flex-start; }
   #blog header .container {
-    width: 90%; }
+    width: 80%; }
   #blog header .hamburger {
     display: none; }
   #blog .recentPosts .imgContainer {
@@ -959,6 +961,8 @@ footer {
     align-items: flex-start; }
   #contact header .hamburger {
     display: none; }
+  #contact header .container {
+    width: 80%; }
   #contact .contactDetails ul {
     width: 50%; } }
 
@@ -1032,9 +1036,9 @@ footer {
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -1043,9 +1047,8 @@ footer {
       width: calc(70% - 20px);
       margin: 0 0 20px 0;
       padding: 30px;
-      position: absolute;
-      bottom: 80px;
-      right: 0; }
+      position: relative;
+      top: -100px; }
     #contact .contactForm {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -1094,14 +1097,13 @@ footer {
     padding: 10px 30px; }
   /**** Header ****/
   header {
-    min-height: 100vh; }
+    min-height: 90vh; }
     header nav ul li {
       margin: 0 40px; }
     header .wrapper {
       position: relative; }
   .logoWrap {
-    margin-top: 350px;
-    z-index: 99; }
+    margin-top: 300px; }
   .headerOverlay {
     display: block;
     position: absolute;
@@ -1160,44 +1162,41 @@ footer {
   .iconWrap {
     margin-right: 20px; }
   /**** New location plan ahead  ****/
-  .newLocPlanAhead {
-    position: relative; }
-    .newLocPlanAhead .flexParent {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-    .newLocPlanAhead .imgContainer {
-      margin: 0;
-      position: absolute; }
+  .newLocPlanAhead .flexParent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .newLocPlanAhead .imgContainer {
+    margin: 0; }
   .leftContainer {
-    margin-top: 440px;
+    position: relative;
+    top: -100px;
     width: 45%; }
     .leftContainer .flexParent {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
-    .leftContainer .imgContainer {
-      top: -50px; }
     .leftContainer .container h2,
     .leftContainer .container p,
     .leftContainer .container .buttonWrap {
       text-align: right; }
   .rightContainer {
-    margin-bottom: 440px;
+    position: relative;
+    bottom: -55px;
     width: 45%; }
     .rightContainer .flexParent {
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
-    .rightContainer .imgContainer {
-      bottom: -45px; }
     .rightContainer .container h2,
     .rightContainer .container p,
     .rightContainer .container .buttonWrap {
       text-align: left; }
+    .rightContainer .buttonWrap {
+      padding: 40px 0; }
   /**** Events ****/
   .events1 {
     padding-top: 80px; }
@@ -1237,6 +1236,8 @@ footer {
     /**** Comments ****/ }
     #blog .container {
       width: 90%; }
+    #blog header {
+      min-height: 700px; }
     #blog .logoWrap {
       margin-top: 200px; }
     #blog main .flexParent {
@@ -1283,19 +1284,18 @@ footer {
         text-transform: capitalize; }
     #blog .blogMain {
       -ms-flex-preferred-size: 60%;
-      flex-basis: 60%; }
+      flex-basis: 60%;
+      position: relative;
+      top: -100px; }
     #blog .blogPosts {
       border-left: 4px solid #985e6d;
       border-bottom: 4px solid #985e6d;
-      position: relative;
-      padding: 420px 0 40px; }
+      padding: 0 0 0 15px; }
       #blog .blogPosts .imgContainer {
-        position: absolute;
-        top: -200px;
-        right: -5px;
-        width: 99%; }
+        position: relative;
+        top: -15px; }
       #blog .blogPosts .contentWrap {
-        padding: 0 40px; }
+        padding: 25px 0 40px; }
       #blog .blogPosts h2,
       #blog .blogPosts h3,
       #blog .blogPosts p {
@@ -1309,10 +1309,9 @@ footer {
       width: 100%; }
   /**** CONTACT ****/
   #contact {
-    /**** Header ****/
     /**** form ****/ }
     #contact header {
-      min-height: 600px; }
+      min-height: 700px; }
       #contact header .flexParent {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
