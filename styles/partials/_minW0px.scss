@@ -119,34 +119,17 @@ input#name,
 input#email,
 textarea#comment,
 textarea#message {
-  border: none;
-}
-
-input#name,
-input#email,
-textarea#comment,
-textarea#message {
   width: 100%;
   padding: 5px;
   min-height: 3rem;
+  border: none;
+  color: $OffWhite;
+  @include bodyFont(1rem, 1.45rem, 0.05rem, left);
 }
 
 textarea#comment,
 textarea#message {
   min-height: 10rem;
-}
-
-textarea#comment::placeholder,
-textarea#message::placeholder {
-  color: $OffWhite;
-}
-
-input[type='text']#name,
-input[type='email']#email,
-input[type='textarea']#comment,
-input[type='textarea']#message {
-  color: $OffWhite;
-  @include bodyFont(1rem, 1.45rem, 0.05rem, left);
 }
 
 .name,
@@ -461,7 +444,6 @@ footer {
 
     li::before {
       content: '\2022';
-      /* \2022 is the CSS Code/unicode for a bullet */
       color: $purple;
       font-weight: 900;
       display: inline-block;
@@ -482,10 +464,12 @@ footer {
 
   .blogMain {
     background-color: $OffWhite;
+    width: 100%;
   }
 
   .blogPosts {
     padding: 50px 0 40px 0;
+    margin: 0 auto;
 
     h2,
     p {
@@ -541,8 +525,7 @@ footer {
     background-color: $purple;
   }
 
-  label,
-  textarea#comment::placeholder {
+  label {
     @include bodyFont(1.1rem, 1.45rem, 0.05rem, left);
     color: $OffWhite;
   }
@@ -585,8 +568,7 @@ footer {
     background-color: $purple;
   }
 
-  label,
-  textarea#message::placeholder {
+  label {
     @include bodyFont(1.1rem, 2rem, 0.05rem, left);
     color: $OffWhite;
   }

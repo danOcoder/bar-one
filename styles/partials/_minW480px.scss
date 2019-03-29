@@ -1,10 +1,8 @@
 @media (min-width: 480px) {
-  /**** Global styles ****/
   .container {
     width: 80%;
   }
 
-  /**** Header ****/
   header {
     h1 {
       @include headingFont(3rem, 0.05rem);
@@ -21,8 +19,6 @@
     right: 50px;
   }
 
-  /**** New space community blog get in touch ****/
-
   .spaceComBlogTouch {
     .iconWrap {
       padding: 30px;
@@ -35,8 +31,6 @@
     }
   }
 
-  /**** Events ****/
-
   .events2 {
     .imgContainer {
       width: 55%;
@@ -46,22 +40,6 @@
   /**** BLOG ****/
 
   #blog {
-    /**** Header ****/
-
-    // header {
-    //   h1 {
-    //     @include bodyFont(10rem, 2.35rem, 0.05rem, left);
-    //   }
-    // }
-
-    /**** Blog main ****/
-
-    .blogPosts {
-      .imgContainer {
-        box-shadow: -15px 15px 0px 4px $purple;
-      }
-    }
-
     .recentPosts {
       .imgContainer {
         box-shadow: 15px 15px 0px 4px $purple;
