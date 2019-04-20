@@ -1108,7 +1108,7 @@ footer {
   .leftContainer {
     position: relative;
     top: -100px;
-    width: 45%; }
+    width: 40%; }
     .leftContainer .flexParent {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1121,7 +1121,7 @@ footer {
   .rightContainer {
     position: relative;
     bottom: -55px;
-    width: 45%; }
+    width: 40%; }
     .rightContainer .flexParent {
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
