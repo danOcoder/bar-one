@@ -1,10 +1,42 @@
 @media (min-width: 992px) {
-  .container {
-    width: 70%;
-  }
-
   header {
     min-height: 700px;
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin-top: 50px;
+
+        li {
+          margin: 0 25px;
+          flex-grow: 1;
+        }
+
+        .logo {
+          display: block;
+          flex-grow: 2;
+        }
+
+        a {
+          @include bodyFont(1.4rem, 1.45rem, 0.1rem, right);
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  .logoWrap {
+    margin-top: 200px;
   }
 
   .events3 {
@@ -28,6 +60,10 @@
   /**** BLOG ****/
 
   #blog {
+    .hamburger {
+      display: none;
+    }
+
     .blogPosts {
       width: 80%;
       .imgContainer {
@@ -95,6 +131,10 @@
   /**** CONTACT ****/
 
   #contact {
+    .hamburger {
+      display: none;
+    }
+
     main {
       .container {
         width: 90%;

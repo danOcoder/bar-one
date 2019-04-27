@@ -3,47 +3,12 @@
     min-height: 700px;
 
     h1 {
-      @include headingFont(4.5rem, 0.7rem);
+      @include headingFont(4.5rem, 0.05rem);
     }
 
     h2 {
       @include bodyFont(2.5rem, 2, 0.1rem, left);
     }
-
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      text-align: center;
-
-      ul {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        margin-top: 50px;
-
-        li {
-          margin: 0 25px;
-        }
-
-        .logo {
-          display: block;
-        }
-
-        a {
-          @include bodyFont(1.4rem, 1.45rem, 0.1rem, right);
-        }
-      }
-    }
-
-    .hamburger {
-      display: none;
-    }
-  }
-
-  .logoWrap {
-    margin-top: 200px;
   }
 
   .newLocPlanAhead {
@@ -101,9 +66,6 @@
       .container {
         width: 80%;
       }
-      .hamburger {
-        display: none;
-      }
     }
 
     .recentPosts {
@@ -120,9 +82,6 @@
       .flexParent {
         justify-content: flex-start;
         align-items: flex-start;
-      }
-      .hamburger {
-        display: none;
       }
       .container {
         width: 80%;
